@@ -46,8 +46,21 @@ button,input,select,textarea{font:inherit;color:inherit}
 .chick.hap .wr{transform:rotate(-115deg)}
 .chick .sp{opacity:0;transition:opacity .3s}
 .chick.hap .sp{opacity:1}
-.chick .bd{transform-origin:32px 60px;animation:bob 3.2s ease-in-out infinite}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+.chick{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.chick .bd{transform-box:view-box;transform-origin:32px 58px;animation:bob 2.6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-4px) rotate(-5deg)}50%{transform:translateY(0) rotate(0)}75%{transform:translateY(-4px) rotate(5deg)}}
+.chick .ey{transform-box:fill-box;transform-origin:50% 50%;animation:blink 4.2s infinite}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.chick .lf{transform-box:fill-box;transform-origin:0% 100%;animation:leaf 2.6s ease-in-out infinite}
+@keyframes leaf{0%,100%{transform:rotate(0)}50%{transform:rotate(-12deg)}}
+.chick.jump .bd{animation:jump .7s ease-out}
+@keyframes jump{0%{transform:translateY(0)}35%{transform:translateY(-14px) rotate(-8deg)}60%{transform:translateY(0) scale(1.06,.92)}80%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.chick.jump .wl{animation:flapL .7s ease-in-out}
+.chick.jump .wr{animation:flapR .7s ease-in-out}
+@keyframes flapL{0%,100%{transform:rotate(0)}25%,75%{transform:rotate(100deg)}50%{transform:rotate(40deg)}}
+@keyframes flapR{0%,100%{transform:rotate(0)}25%,75%{transform:rotate(-100deg)}50%{transform:rotate(-40deg)}}
+.chick.hap .sp{animation:twinkle 1.2s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:1}50%{opacity:.3}}
 .bub{position:relative;background:var(--card);color:var(--ink);border-radius:14px;padding:6px 12px;font-size:14px;font-weight:600;white-space:nowrap;box-shadow:0 2px 0 var(--lemd);margin-right:6px}
 .bub::before{content:"";position:absolute;left:-6px;top:50%;margin-top:-6px;border:6px solid transparent;border-right-color:var(--card);border-left:0}
 h1{font-size:clamp(26px,3.6vw,38px);line-height:1.1;letter-spacing:-.02em;margin:0 8px 0 0;white-space:nowrap}
@@ -296,7 +309,7 @@ label.f{display:grid;gap:3px;font-size:13px;font-weight:600;color:var(--mute)}
 @media(max-width:600px){.stats{margin-left:0;width:100%}.prog{flex:1 1 100%;width:auto}.ev{height:9px;line-height:9px;padding:0;margin:1px 1px;width:calc(100% - 2px)}.ev *{display:none!important}.dn{justify-content:center;padding:3px 0 0}.dn svg{display:none}.more{font-size:12px;padding:0 3px}.wdh div{text-align:center;padding:8px 2px}.pane,.drb{padding:14px}.lr{grid-template-columns:minmax(0,1fr)}.tlv>li{grid-template-columns:minmax(0,1fr)}}
 .band .bub:empty{display:none}
 @media(max-width:700px){.bub{display:none}.chick{width:54px;height:54px}}
-@media(prefers-reduced-motion:reduce){.chick .bd{animation:none}.track i,.pbar>i{transition:none}}
+@media(prefers-reduced-motion:reduce){.chick .bd,.chick .ey,.chick .lf,.chick.hap .sp{animation:none}.track i,.pbar>i{transition:none}}
 </style>
 </head>
 <body>
@@ -465,8 +478,10 @@ function quickAdd(pre,date,bl,opt){
 }
 
 /* ---------- header & filter ---------- */
-const CHICK='<g class="sp" fill="#ffffff" stroke="#f7b500" stroke-width="1"><path d="M8 14l1.6 3.4 3.4 1.6-3.4 1.6L8 24l-1.6-3.4L3 19l3.4-1.6z"/><path d="M56 10l1.2 2.6 2.6 1.2-2.6 1.2L56 17.6l-1.2-2.6-2.6-1.2 2.6-1.2z"/></g><g class="bd"><ellipse cx="32" cy="60" rx="15" ry="2.6" fill="#000" opacity=".12"/><path d="M25 56l-2 4M25 56l1 4M39 56l-1 4M39 56l2 4" stroke="#f08c00" stroke-width="2" stroke-linecap="round"/><g class="w wl"><ellipse cx="13" cy="38" rx="5.5" ry="8" fill="#ffd21f" stroke="#f0b400" stroke-width="1" transform="rotate(25 13 38)"/></g><g class="w wr"><ellipse cx="51" cy="38" rx="5.5" ry="8" fill="#ffd21f" stroke="#f0b400" stroke-width="1" transform="rotate(-25 51 38)"/></g><path d="M32 12c12 0 21 9 21 22 0 12-9 22-21 22S11 46 11 34c0-13 9-22 21-22z" fill="#ffe14d"/><path d="M48 24c4 6 4 16-1 23-4 6-10 9-16 9 9-4 15-11 17-32z" fill="#ffd21f"/><path d="M30 10.5c1.2-1 2.8-1 4 0l-.6 2.4h-2.8z" fill="#ffd21f"/><ellipse cx="24" cy="22" rx="5" ry="3" fill="#fff8c4" transform="rotate(-30 24 22)"/><path d="M32 11c2-6 8-8 13-7-2 5-7 8-13 7z" fill="#5db33a"/><path d="M33 10.5c3-2.4 6.5-4 10.5-5" stroke="#3f8f2b" stroke-width="1.2" fill="none" stroke-linecap="round"/><path d="M32 12c-.6-2.2-.4-4 .6-5.4" stroke="#7a5a1e" stroke-width="1.6" fill="none" stroke-linecap="round"/><circle cx="25" cy="32" r="3.1" fill="#2b2614"/><circle cx="39" cy="32" r="3.1" fill="#2b2614"/><circle cx="26" cy="31" r="1" fill="#fff"/><circle cx="40" cy="31" r="1" fill="#fff"/><ellipse cx="20" cy="38" rx="3.3" ry="2" fill="#ff9aa2" opacity=".85"/><ellipse cx="44" cy="38" rx="3.3" ry="2" fill="#ff9aa2" opacity=".85"/><path d="M28.5 36.5h7L32 41z" fill="#ff9f1c" stroke="#f08c00" stroke-width=".8" stroke-linejoin="round"/></g>';
+const CHICK='<g class="sp" fill="#ffffff" stroke="#f7b500" stroke-width="1"><path d="M8 14l1.6 3.4 3.4 1.6-3.4 1.6L8 24l-1.6-3.4L3 19l3.4-1.6z"/><path d="M56 10l1.2 2.6 2.6 1.2-2.6 1.2L56 17.6l-1.2-2.6-2.6-1.2 2.6-1.2z"/></g><g class="bd"><ellipse cx="32" cy="60" rx="15" ry="2.6" fill="#000" opacity=".12"/><path d="M25 56l-2 4M25 56l1 4M39 56l-1 4M39 56l2 4" stroke="#f08c00" stroke-width="2" stroke-linecap="round"/><g class="w wl"><ellipse cx="13" cy="38" rx="5.5" ry="8" fill="#ffd21f" stroke="#f0b400" stroke-width="1" transform="rotate(25 13 38)"/></g><g class="w wr"><ellipse cx="51" cy="38" rx="5.5" ry="8" fill="#ffd21f" stroke="#f0b400" stroke-width="1" transform="rotate(-25 51 38)"/></g><path d="M32 12c12 0 21 9 21 22 0 12-9 22-21 22S11 46 11 34c0-13 9-22 21-22z" fill="#ffe14d"/><path d="M48 24c4 6 4 16-1 23-4 6-10 9-16 9 9-4 15-11 17-32z" fill="#ffd21f"/><path d="M30 10.5c1.2-1 2.8-1 4 0l-.6 2.4h-2.8z" fill="#ffd21f"/><ellipse cx="24" cy="22" rx="5" ry="3" fill="#fff8c4" transform="rotate(-30 24 22)"/><g class="lf"><path d="M32 11c2-6 8-8 13-7-2 5-7 8-13 7z" fill="#5db33a"/><path d="M33 10.5c3-2.4 6.5-4 10.5-5" stroke="#3f8f2b" stroke-width="1.2" fill="none" stroke-linecap="round"/></g><path d="M32 12c-.6-2.2-.4-4 .6-5.4" stroke="#7a5a1e" stroke-width="1.6" fill="none" stroke-linecap="round"/><g class="ey"><circle cx="25" cy="32" r="3.1" fill="#2b2614"/><circle cx="39" cy="32" r="3.1" fill="#2b2614"/><circle cx="26" cy="31" r="1" fill="#fff"/><circle cx="40" cy="31" r="1" fill="#fff"/></g><ellipse cx="20" cy="38" rx="3.3" ry="2" fill="#ff9aa2" opacity=".85"/><ellipse cx="44" cy="38" rx="3.3" ry="2" fill="#ff9aa2" opacity=".85"/><path d="M28.5 36.5h7L32 41z" fill="#ff9f1c" stroke="#f08c00" stroke-width=".8" stroke-linejoin="round"/></g>';
 const chickEl=document.getElementById('chick');if(chickEl)chickEl.innerHTML=CHICK;
+const CHEER=['오늘도 상큼하게!','하나씩 하면 돼요','잘하고 있어요!','물 한 잔 마시고 해요','삐약! 응원해요','기록 한 줄이면 충분해요'];let cheerT=null;
+chickEl.addEventListener('click',()=>{chickEl.classList.remove('jump');void chickEl.getBoundingClientRect();chickEl.classList.add('jump');const b=$('#bub');b.textContent=CHEER[Math.floor(Math.random()*CHEER.length)];clearTimeout(cheerT);cheerT=setTimeout(()=>{chickEl.classList.remove('jump');renderChick(items())},2600)});
 function renderChick(list){
   const td=today(),tod=list.filter(t=>onDay(t,td)),left=tod.filter(t=>!t.done).length,over=list.filter(t=>isOver(t)).length;
   const happy=tod.length>0&&left===0;
