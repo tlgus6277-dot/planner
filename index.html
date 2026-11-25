@@ -342,6 +342,19 @@ svg .wr{transform-box:fill-box;transform-origin:15% 20%}
 .bt tr.op>td{background:color-mix(in srgb,var(--c) 7%,transparent)}
 .bt .bn{font-weight:600;color:var(--ink);text-decoration:none}
 .bt .bn:hover{text-decoration:underline}
+.bstep{border:1px solid var(--line);border-radius:12px;margin:0 0 10px;background:var(--card,#fff)}
+.bstep .bsh{display:flex;align-items:center;gap:6px;width:100%;padding:10px 12px;border:0;background:none;font:inherit;text-align:left;cursor:pointer;flex-wrap:wrap}
+.bstep .bsb{padding:0 12px 12px}
+.bno{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--c);color:#fff;font-size:12px;font-weight:700}
+.bchev{margin-left:auto;font-size:13px;color:var(--mute)}
+.bset.on{background:color-mix(in srgb,var(--c) 5%,transparent)}
+.bspend{border-color:color-mix(in srgb,var(--c) 45%,var(--line));background:color-mix(in srgb,var(--c) 8%,transparent)}
+.spbtn{background:var(--c);border-color:var(--c);color:#fff}
+.bsl{list-style:none;margin:0 0 8px;padding:0}
+.bsl li{display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px dashed var(--line)}
+.bsl .bsn{flex:1;min-width:0;font-weight:600}
+.bsl .bsa{font-variant-numeric:tabular-nums;white-space:nowrap}
+.bth{margin:14px 0 4px;font-size:15px}
 .bt tr.sp>td{background:color-mix(in srgb,var(--c) 4%,transparent);padding:4px 8px 12px 22px}
 .spl{list-style:none;margin:0 0 8px;padding:0}
 .spl li{display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px dashed var(--line)}
@@ -349,12 +362,160 @@ svg .wr{transform-box:fill-box;transform-origin:15% 20%}
 .spl .sm{flex:1;min-width:0}
 .spl .sa{font-variant-numeric:tabular-nums;white-space:nowrap}
 @media (prefers-reduced-motion:reduce){.mini .bd,.wv{animation:none}}
+/* v3.7 budget */
+#vBud>div>section{margin-top:16px}
+#vBud #budTop>section{margin-top:0}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:10px 0 8px}
+.kpi>div{background:var(--soft);border-radius:10px;padding:8px 12px;min-width:0}
+.kpi span{display:block;font-size:12.5px;color:var(--mute)}
+.kpi b{display:block;font-size:17px;font-variant-numeric:tabular-nums;line-height:1.3;overflow-wrap:anywhere}
+.kpi small{display:block;font-size:11.5px;color:var(--mute)}
+.kpi.big b{font-size:22px}
+.kpi .av{background:color-mix(in srgb,var(--leaf) 13%,var(--card));box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--leaf) 45%,transparent)}
+.kpi .av b{color:var(--leaf)}
+.kpi .av.neg{background:color-mix(in srgb,var(--hot) 12%,var(--card));box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--hot) 50%,transparent)}
+.kpi .av.neg b{color:var(--hot)}
+.kpi.sm2{grid-template-columns:repeat(auto-fit,minmax(110px,1fr))}
+.kpi.sm2 b{font-size:15px}
+.sbar{position:relative;display:flex;height:14px;border-radius:7px;background:color-mix(in srgb,var(--leaf) 18%,var(--soft));overflow:visible;margin:6px 0 4px}
+.sbar>i{display:block;height:100%}
+.sbar>i:first-child{border-radius:7px 0 0 7px}
+.sbar>i.d{background:var(--c,#e0b400)}
+.sbar>i.p{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--c,#e0b400) 55%,transparent) 0 5px,color-mix(in srgb,var(--c,#e0b400) 25%,transparent) 5px 10px)}
+.sbar.over{box-shadow:0 0 0 2px var(--hot)}
+.sbar>em{position:absolute;top:-4px;width:2px;height:22px;background:var(--ink);border-radius:1px}
+.lgd{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--mute);margin:4px 0 0}
+.lgd i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:4px}
+.lgd i.d{background:var(--c,#e0b400)}
+.lgd i.p{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--c,#e0b400) 55%,transparent) 0 3px,color-mix(in srgb,var(--c,#e0b400) 25%,transparent) 3px 6px)}
+.lgd i.a{background:color-mix(in srgb,var(--leaf) 30%,var(--soft))}
+.btools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
+.btools input[type=search]{flex:1 1 200px;min-width:0}
+.bseg{display:inline-flex;background:var(--soft);border-radius:999px;padding:3px}
+.bseg button{height:36px;padding:0 16px;border:0;border-radius:999px;background:transparent;font:inherit;font-weight:600;color:var(--mute);cursor:pointer}
+.bseg button[aria-selected=true]{background:var(--bink);color:var(--lem)}
+.rseg{display:inline-flex;background:var(--soft);border-radius:10px;padding:3px;margin-bottom:8px}
+.rseg label{cursor:pointer}
+.rseg input{position:absolute;opacity:0;pointer-events:none}
+.rseg span{display:block;padding:6px 14px;border-radius:8px;font-weight:600;font-size:14px;color:var(--mute)}
+.rseg input:checked+span{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgb(0 0 0/.12)}
+.rseg input:focus-visible+span{outline:2px solid var(--focus)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px 10px;align-items:end;width:100%}
+.fgrid .f{display:flex;flex-direction:column;gap:3px;font-size:12.5px;color:var(--mute);min-width:0}
+.fgrid .f input,.fgrid .f select,.fgrid .f textarea{width:100%;min-width:0;color:var(--ink)}
+.fgrid .f textarea{height:auto;padding:8px 10px}
+.fgrid .wide{grid-column:span 2}
+.fgrid .fbtn{flex-direction:row;gap:6px}
+.money{text-align:right;font-variant-numeric:tabular-nums}
+.budh h2{overflow-wrap:anywhere;min-width:0}
+.warnb{display:inline-block;padding:2px 8px;border-radius:999px;background:color-mix(in srgb,var(--hot) 14%,transparent);color:var(--hot);font-size:12.5px;font-weight:700;white-space:nowrap}
+.warnb.sm{font-size:11px;padding:1px 6px}
+.bsl>li{display:block;padding:8px 0;border-bottom:1px dashed var(--line)}
+.bsi{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.bsi .bsn{flex:1 1 160px;min-width:0;font-weight:600;overflow-wrap:anywhere}
+.bsi .bsn small{display:block;font-weight:400;font-size:12.5px;color:var(--mute);white-space:pre-wrap}
+.bsi .bsn small.nob{font-style:italic;opacity:.7}
+.bsv{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
+.bsv b{color:var(--ink);font-size:14px}
+.up{color:var(--leaf);font-weight:700}.dn{color:var(--hot);font-weight:700}
+.chg{list-style:none;margin:6px 0 0 12px;padding:0 0 0 10px;border-left:2px solid var(--line);font-size:13px}
+.chg li{display:flex;gap:8px;align-items:center;padding:2px 0}
+.chg .rs{flex:1;min-width:0;color:var(--mute)}
+.chgf{margin-top:8px;padding:10px;border-radius:10px;background:var(--soft)}
+.spl li{flex-wrap:wrap}
+.spl li.plan{opacity:.92}
+.spl li.ed{display:block}
+.chip{font-size:11.5px;font-weight:700;padding:2px 7px;border-radius:999px;white-space:nowrap}
+.chip.done{background:color-mix(in srgb,var(--c) 22%,transparent)}
+.chip.plan{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--c) 22%,transparent) 0 4px,transparent 4px 8px);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 45%,transparent)}
+.spl .vd{font-weight:600}
+.spl .sm{overflow-wrap:anywhere}
+.sub2{display:block;font-size:11.5px;color:var(--mute);font-weight:400}
+.basis{margin:2px 0 8px;font-size:13.5px;white-space:pre-wrap}
+.bt tr.ovr>td{background:color-mix(in srgb,var(--hot) 6%,transparent)}
+.bt td:first-child{overflow-wrap:anywhere}
+.mini0{padding-top:12px;padding-bottom:12px}
+.nob-l{display:flex;flex-wrap:wrap;gap:8px}
+.nobb{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border:1px dashed var(--line);border-radius:10px;background:var(--card);font:inherit;cursor:pointer;text-align:left}
+.nobb i{width:10px;height:10px;border-radius:3px;background:var(--c);flex:none}
+.nobb span{color:var(--focus);font-size:13px;font-weight:600}
+.mchart{width:100%;height:auto;max-height:280px;margin:10px 0 2px;--c:#e0b400}
+.mchart .gl{stroke:var(--line)}
+.mchart .ax{fill:var(--mute);font-size:11px}
+.mchart .bp{fill:color-mix(in srgb,#e0b400 35%,transparent);stroke:#e0b400;stroke-width:1}
+.mchart .ba{fill:#e0b400}
+#vBud .card>.lgd{--c:#e0b400}
+@media (max-width:560px){.fgrid .wide{grid-column:1/-1}.kpi.big b{font-size:18px}}
+/* v3.8 print sheet */
+.rsw{margin:0 0 14px}
+.ck{display:flex;align-items:center;gap:8px;font-size:14.5px;cursor:pointer}
+.ck input{width:18px;height:18px;accent-color:var(--bink)}
+.pwrap{min-width:0;overflow-x:auto;padding:4px 2px 12px}
+#printRoot{display:none}
+.psheet{--ink2:#1b1d22;--mut2:#6b7080;--ln2:#c9cdd6;width:192mm;min-height:277mm;margin:0 auto;padding:7mm 7mm 6mm;background:#fff;color:var(--ink2);box-shadow:0 2px 14px rgb(0 0 0/.12),0 0 0 1px #e6e8ee;border-radius:4px;font-size:9.5pt;line-height:1.35;display:flex;flex-direction:column;gap:3.2mm;color-scheme:light;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.psheet h1{font-size:15pt;margin:0;letter-spacing:-.02em}
+.psheet h2{font-size:10pt;margin:0 0 1.5mm;padding-bottom:1mm;border-bottom:1.5px solid var(--ink2)}
+.psh{display:flex;justify-content:space-between;align-items:flex-end;gap:4mm;border-bottom:2.5px solid #f7cf2a;padding-bottom:2mm}
+.psh p{margin:.5mm 0 0;color:var(--mut2);font-size:9pt}
+.pso{text-align:right;font-size:8pt;color:var(--mut2);line-height:1.6}
+.pso .qlg{display:inline-flex;gap:3px;align-items:center}
+.psheet .qbx{display:inline-grid;place-items:center;width:2.6mm;height:2.6mm;border:1px solid var(--ink2);border-radius:.6mm;font-size:6.5pt;line-height:1;flex:none;margin-right:1mm;vertical-align:-.3mm;background:#fff}
+.psheet .qdl{display:inline-block;font-size:6.5pt;font-weight:700;color:#fff;background:#d9431c;border-radius:.8mm;padding:0 .8mm;margin-right:.8mm;line-height:1.35}
+.psheet .qpm{display:inline-block;font-size:7pt;font-weight:800;color:#8a6d00;background:#ffe45c;border-radius:.8mm;padding:0 .7mm;margin-right:.8mm;line-height:1.35}
+.psheet .qtm{font-variant-numeric:tabular-nums;color:var(--mut2);margin-right:1mm}
+.psheet .qur{color:#d9431c;font-weight:800;margin-right:.6mm}
+.psheet .qsp{color:var(--mut2);font-size:7pt}
+.psheet .hot{color:#d9431c}
+.psheet ul{list-style:none;margin:0;padding:0}
+.psheet li.qdone{color:var(--mut2);text-decoration:line-through}
+.pcal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:1px solid var(--ln2);border-left:1px solid var(--ln2);flex:1;min-height:150mm}
+.pdw{font-size:8pt;font-weight:700;text-align:center;padding:.8mm;border-right:1px solid var(--ln2);border-bottom:1px solid var(--ln2);background:#fff8cc}
+.pdw.sun,.qn.sun{color:#d9431c}.pdw.sat,.qn.sat{color:#2f5bea}
+.pdc{border-right:1px solid var(--ln2);border-bottom:1px solid var(--ln2);padding:.8mm 1mm;min-width:0;min-height:22mm;overflow:hidden}
+.pdc.out{background:#f6f7f9}
+.pdc.out .qn{opacity:.35}
+.pdc.now{box-shadow:inset 0 0 0 1.5px #f7cf2a}
+.qn{font-weight:700;font-size:9pt}
+.pdc li{font-size:7.3pt;line-height:1.3;margin-top:.5mm;display:flex;align-items:flex-start;overflow-wrap:anywhere;border-left:1.6mm solid var(--c);padding-left:.8mm}
+.pdc li.psp{border-left-color:transparent;padding-left:0}
+.pdc li .qbx{width:2.2mm;height:2.2mm;margin-top:.3mm}
+.more2{font-size:7pt;color:var(--mut2)}
+.pwk{width:100%;border-collapse:collapse;flex:1}
+.pwk th,.pwk td{border:1px solid var(--ln2);vertical-align:top;padding:1.2mm 1.6mm}
+.pwk th{width:13mm;text-align:center;background:#fff8cc;font-weight:400}
+.pwk th b{display:block;font-size:11pt}.pwk th b.sun{color:#d9431c}.pwk th b.sat{color:#2f5bea}
+.pwk th span{font-size:8pt;color:var(--mut2)}
+.pwk tr{height:25mm}
+.pwk tr.now th{background:#ffe45c}
+.pwk .qt{width:58%}
+.pwk .qt li{display:flex;align-items:flex-start;margin:.4mm 0;border-left:1.6mm solid var(--c);padding-left:1mm;overflow-wrap:anywhere}
+.pwk .qt li.psp{border-left-color:transparent;padding-left:0}
+.pwk .pmemo{background:repeating-linear-gradient(transparent 0 6.6mm,#dfe2e8 6.6mm calc(6.6mm + 1px))}
+.pbot{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:4mm}.pbot>section{min-width:0}.psheet,.psheet *{box-sizing:border-box}
+.ptb{width:100%;border-collapse:collapse;font-size:8pt}
+.ptb th{text-align:left;font-weight:600;color:var(--mut2);border-bottom:1px solid var(--ln2);padding:.6mm .8mm}
+.ptb td{border-bottom:1px dashed var(--ln2);padding:.8mm;overflow-wrap:anywhere}
+.ptb .n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ptb .qdot{display:inline-block;width:2mm;height:2mm;border-radius:.5mm;background:var(--c);margin-right:1mm}
+.plist li{font-size:8pt;padding:.6mm 0;border-bottom:1px dashed var(--ln2);overflow-wrap:anywhere}
+.plist .qpd{display:inline-block;min-width:9mm;color:var(--mut2);font-variant-numeric:tabular-nums}
+.pe{color:var(--mut2);font-size:8pt;margin:0}
+.pnote .qlines{display:flex;flex-direction:column}
+.pnote .qlines i{display:block;height:7mm;border-bottom:1px solid #dfe2e8}
+.psheet.week .pnote .qlines i{height:6.5mm}
+@page{size:A4 portrait;margin:9mm}
+@media print{html,body{background:#fff!important}body.printing>*:not(#printRoot){display:none!important}html,body{width:auto!important;min-width:0!important;margin:0!important;padding:0!important}#printRoot{display:block!important;width:192mm}#printRoot .psheet{box-shadow:none;border-radius:0;margin:0;width:192mm;min-height:0;height:276mm;padding:0;overflow:hidden}}
+.pdc li{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block!important}
+.pdc li .qbx,.pdc li .qdl,.pdc li .qpm{vertical-align:-.2mm}
+.psheet .qdl,.psheet .qpm{white-space:nowrap}
+.pdc{display:flex;flex-direction:column}
+.pdc ul{min-width:0}
 </style>
 </head>
 <body>
 <header class="band">
   <div class="bar">
-    <div class="brand"><span>업무 플래너</span><div class="seg" role="group" aria-label="화면 선택"><button type="button" data-view="month" aria-pressed="true">월간</button><button type="button" data-view="week" aria-pressed="false">주간</button><button type="button" data-view="day" aria-pressed="false">일간</button><button type="button" data-view="bud" aria-pressed="false">예산</button><button type="button" data-view="rep" aria-pressed="false">업무보고</button></div></div>
+    <div class="brand"><span>업무 플래너</span><div class="seg" role="group" aria-label="화면 선택"><button type="button" data-view="month" aria-pressed="true">월간</button><button type="button" data-view="week" aria-pressed="false">주간</button><button type="button" data-view="day" aria-pressed="false">일간</button><button type="button" data-view="bud" aria-pressed="false">예산</button><button type="button" data-view="rep" aria-pressed="false">인쇄·보고</button></div></div>
     <div class="mon">
       <svg class="chick" id="chick" viewBox="0 0 64 64" aria-hidden="true"></svg><span class="bub" id="bub"></span>
       <h1 id="h1">이번 달</h1>
@@ -559,7 +720,7 @@ function renderHead(list){
   renderChick(list);
   const h=$('#h1'),d=parse(cur);
   for(const b of document.querySelectorAll('.seg button'))b.setAttribute('aria-pressed',String(b.dataset.view===view));
-  $('#navs').hidden=view==='bud'||(view==='rep'&&!['day','week','month'].includes(rp.type));
+  $('#navs').hidden=view==='bud'||(view==='rep'&&pmode!=='print'&&!['day','week','month'].includes(rp.type));
   let st='';
   if(view==='month'){
     h.textContent=d.getFullYear()+'년 '+(d.getMonth()+1)+'월';
@@ -569,6 +730,7 @@ function renderHead(list){
   }else if(view==='week'){const ws=weekStart(cur),we=addDays(ws,6);h.textContent=(parse(ws).getMonth()+1)+'월 '+parse(ws).getDate()+'일 – '+(parse(we).getMonth()+1)+'월 '+parse(we).getDate()+'일'}
   else if(view==='day')h.textContent=label(cur)+(cur===today()?' · 오늘':'');
   else if(view==='bud')h.textContent='예산 집행';
+  else if(pmode==='print')h.textContent=psTitle().replace(/ (업무 계획표|주간 업무표)$/,'');
   else h.textContent='업무보고';
   $('#stats').innerHTML=st;
 }
@@ -732,7 +894,7 @@ function bizHtml(b,list,bm){
   const curPh=b.phases.find(p=>!p.done);
   h+='<div class="box"><h3>추진 단계 <span>'+(b.phases.length?b.phases.filter(p=>p.done).length+'/'+b.phases.length+' 단계 완료'+(curPh?' · 지금: '+esc(curPh.name):' · 모든 단계 완료'):'단계별 진행 관리')+'</span></h3>'+(b.phases.length?'<ul class="phs">'+b.phases.map((p,i)=>{const a=mine.filter(t=>t.phase===p.id),d=a.filter(t=>t.done).length,allDone=a.length>0&&d===a.length;return '<li class="'+(p.done?'pdone':'')+(curPh&&curPh.id===p.id?' pcur':'')+'"><span class="pn"><button type="button" class="cb'+(p.done?' on':'')+'" data-act="phdone" data-id="'+id+'" data-i="'+i+'" aria-label="'+esc(p.name)+(p.done?' 완료 취소':' 단계 완료로 표시')+'" style="display:inline-grid;vertical-align:-3px;margin-right:6px;width:18px;height:18px"></button><span class="ptx">'+(i+1)+'. '+esc(p.name)+'</span>'+(p.done?' <span class="okb">완료'+(p.doneAt?' '+short(isoDay(p.doneAt)):'')+'</span>':curPh&&curPh.id===p.id?' <span class="curb">진행 중</span>':'')+(!p.done&&allDone?' <span class="note" style="display:inline">· 연결 업무 모두 끝! 체크해도 돼요</span>':'')+'</span><span class="pp">'+(a.length?'업무 '+d+'/'+a.length:'연결 업무 없음')+'</span><span class="ia"><button type="button" class="ic" data-act="phup" data-id="'+id+'" data-i="'+i+'" aria-label="위로"'+(i?'':' disabled')+'>'+IC.up+'</button><button type="button" class="ic" data-act="phren" data-id="'+id+'" data-i="'+i+'" aria-label="이름 바꾸기">'+IC.edit+'</button><button type="button" class="ic" data-act="phdel" data-id="'+id+'" data-i="'+i+'" aria-label="단계 삭제">'+IC.del+'</button></span></li>'}).join('')+'</ul><p class="note">단계 앞 네모를 누르면 완료로 표시돼요. 할 일 상세의 \'세부 설정 → 추진 단계\'에서 할 일을 단계에 연결하면 단계별 업무 수가 함께 보여요.</p>'+(()=>{const none=mine.filter(t=>!t.phase||!b.phases.some(p=>p.id===t.phase)).length;return none?'<p class="note">단계가 정해지지 않은 업무 '+none+'개</p>':''})():'<p class="empty">사업계획 수립 → 내부 기안 → 홍보 → … 처럼 단계를 나눠 두면 지금 어느 단계인지 한눈에 볼 수 있어요.</p><button type="button" class="btn ghost sm" data-act="phdef" data-id="'+id+'">기본 단계 넣기</button>')+'<form class="qa" data-phf="'+id+'" style="margin-top:8px"><input type="text" name="name" placeholder="단계 추가" aria-label="단계 이름" maxlength="40"><button class="btn sm">추가</button></form></div>';
   h+='<div class="cols2" style="margin-top:12px;gap:12px"><div class="box" style="margin:0"><h3>주요 마감일</h3>'+(dues.length?'<ul class="tl">'+dues.map(t=>tiHtml(t,bm,{biz:false})).join('')+'</ul>':'<p class="empty">없어요</p>')+'</div><div class="box" style="margin:0"><h3>앞으로 할 업무</h3>'+(lateA.length?'<p class="note hot">지난 미완료 업무 '+lateA.length+'개가 있어요</p>':'')+(next.length?'<ul class="tl">'+next.map(t=>tiHtml(t,bm,{biz:false,date:true})).join('')+'</ul>':'<p class="empty">없어요</p>')+'</div></div>';
-  {const B=budOf(b);h+='<div class="box"><h3>예산 집행 <span>'+(B.items.length?won(B.used)+' / '+won(B.total)+' · '+pctTxt(B.used,B.total):'아직 예산 항목이 없어요')+'</span></h3>'+(B.items.length?budBar(B.pct,s.el)+'<p class="note" style="margin:0 0 6px">잔액 '+won(B.left)+' · 항목 '+B.items.length+'개</p>':'')+'<button type="button" class="btn ghost sm" data-act="gobud" data-id="'+id+'">예산 정리표 열기</button></div>'}
+  {const B=budOf(b);h+='<div class="box"><h3>예산 집행 <span>'+(B.items.length?'집행률 '+pctTxt(B.done,B.total)+' (완료 기준)':'아직 예산 항목이 없어요')+'</span></h3>'+(B.items.length?'<div class="kpi sm2"><div><span>현재 예산</span><b>'+won(B.total)+'</b></div><div><span>집행 완료</span><b>'+won(B.done)+'</b></div><div><span>집행 예정</span><b>'+won(B.plan)+'</b></div><div class="av'+(B.avail<0?' neg':'')+'"><span>가용 잔액</span><b>'+won(B.avail)+'</b></div></div>'+stackBar(B.total,B.done,B.plan,s.el):'')+'<button type="button" class="btn ghost sm" data-act="gobud" data-id="'+id+'" style="margin-top:8px">예산 정리표 열기</button></div>'}
   h+='<div class="box"><h3>업무 추가</h3>'+quickAdd('bz',td,[b],{ph:'이 사업 할 일 추가'})+'</div>';
   h+='<div class="box"><h3>사업 메모·의사결정</h3><form class="g2" data-nf="'+id+'" style="grid-template-columns:minmax(0,1fr) 150px 120px"><textarea name="body" rows="3" placeholder="결정 사항, 운영 방식 변경, 참고할 점" style="grid-column:1/-1" aria-label="사업 메모" maxlength="5000"></textarea><input type="date" name="date" value="'+td+'" aria-label="날짜"><select name="kind" aria-label="종류"><option value="note">메모</option><option value="decision">의사결정</option></select><button class="btn" style="grid-column:1/-1">저장</button></form></div>';
   const ev=[];
@@ -774,7 +936,7 @@ function repData(){
   const T30=addDays(T,30),plan=L.filter(t=>!t.done&&t.date&&t.date>T&&t.date<=T30).sort((a,b)=>a.date.localeCompare(b.date)),nod=L.filter(t=>!t.done&&!t.date);
   const bizs=(rp.biz?bl.filter(b=>b.id===rp.biz):bl).map(b=>{const a=planned.filter(t=>t.biz===b.id),d=a.filter(t=>t.done).length;return {b,n:a.length,d,pct:a.length?Math.round(d/a.length*100):0,all:bstats(all,b)}}).filter(x=>rp.biz||x.n||x.all.total);
   const nLogs=L.reduce((n,t)=>n+lg(t).length,0);
-  const bud=(rp.biz?bl.filter(b=>b.id===rp.biz):bl).map(b=>{const B=budOf(b),sp=[];for(const x of B.items)for(const e of x.spends)if(inP(e.date))sp.push({...e,item:x.name});sp.sort((a,c)=>a.date.localeCompare(c.date));const upto=B.items.reduce((s,x)=>s+x.spends.filter(e=>!e.date||e.date<=T).reduce((a,e)=>a+e.amount,0),0);return {b,B,sp,per:sp.reduce((s,e)=>s+e.amount,0),upto}}).filter(x=>x.B.items.length);
+  const bud=(rp.biz?bl.filter(b=>b.id===rp.biz):bl).map(b=>{const B=budOf(b),sp=[],pl=[];let upto=0;for(const x of B.items)for(const e of x.spends){if(e.status==='done'){if(inP(e.date))sp.push({...e,item:x.name});if(!e.date||e.date<=T)upto+=e.amount}else if(e.date&&e.date<=T30)pl.push({...e,item:x.name})}sp.sort((a,c)=>a.date.localeCompare(c.date));pl.sort((a,c)=>a.date.localeCompare(c.date));return {b,B,sp,pl,per:sp.reduce((s,e)=>s+e.amount,0),upto}}).filter(x=>x.B.items.length);
   return {F,T,bm,done,open,other,planned,pd,follow,bnotes,dmemo,plan,nod,bizs,lg,nLogs,bud,title:RPT[rp.type]};
 }
 function repHtml(R){
@@ -793,7 +955,7 @@ function repHtml(R){
   if(R.follow.length)h+='<h3>'+(n++)+'. 새로 등록한 후속 업무</h3>'+grp(R.follow,t=>{const p=item(t.parent);return '<li>'+ttl(t)+' <small>'+(t.date?short(t.date)+' 예정':'날짜 미정')+(p?' · ← '+esc(p.title):'')+'</small></li>'});
   if(R.bnotes.length)h+='<h3>'+(n++)+'. 사업 메모·의사결정</h3>'+grp(R.bnotes,x=>'<li><small>'+short(x.date)+'</small> '+(x.kind==='decision'?'<b>[의사결정]</b> ':'')+esc(x.body)+'</li>');
   if(R.dmemo.length)h+='<h3>'+(n++)+'. 날짜 메모</h3><ul>'+R.dmemo.map(x=>'<li><small>'+short(x.d)+'</small> '+esc(x.text)+'</li>').join('')+'</ul>';
-  if(R.bud.length){h+='<h3>'+(n++)+'. 예산 집행</h3><div class="scroll"><table><thead><tr><th>세부사업</th><th class="n">예산</th><th class="n">기간 내 집행</th><th class="n">누적 집행('+short(R.T)+'까지)</th><th class="n">집행률</th><th class="n">잔액</th></tr></thead><tbody>'+R.bud.map(x=>'<tr><td>'+esc(x.b.name)+'</td><td class="n">'+won(x.B.total)+'</td><td class="n">'+won(x.per)+'</td><td class="n">'+won(x.upto)+'</td><td class="n">'+pctTxt(x.upto,x.B.total)+'</td><td class="n">'+won(x.B.total-x.upto)+'</td></tr>').join('')+'</tbody></table></div>';const ws=R.bud.filter(x=>x.sp.length);if(ws.length)h+=ws.map(x=>'<h4 style="'+cv(x.b.color)+'"><i></i>'+esc(x.b.name)+' 지출 내역</h4><ul>'+x.sp.map(e=>'<li><small>'+short(e.date)+'</small> ['+esc(e.item)+'] '+esc(e.memo||'')+' — <b>'+won(e.amount)+'</b></li>').join('')+'</ul>').join('');else h+='<p class="empty">이 기간에 기록된 지출이 없어요</p>'}
+  if(R.bud.length){h+='<h3>'+(n++)+'. 예산 집행현황</h3><div class="scroll"><table><thead><tr><th>세부사업</th><th class="n">현재 예산</th><th class="n">기간 내 집행</th><th class="n">누적 집행('+short(R.T)+'까지)</th><th class="n">집행률</th><th class="n">집행 예정</th><th class="n">가용 잔액</th></tr></thead><tbody>'+R.bud.map(x=>'<tr><td>'+esc(x.b.name)+'</td><td class="n">'+won(x.B.total)+'</td><td class="n">'+won(x.per)+'</td><td class="n">'+won(x.upto)+'</td><td class="n">'+pctTxt(x.upto,x.B.total)+'</td><td class="n">'+won(x.B.plan)+'</td><td class="n">'+won(x.B.avail)+'</td></tr>').join('')+'</tbody></table></div>';const ws=R.bud.filter(x=>x.sp.length);h+=ws.length?ws.map(x=>'<h4 style="'+cv(x.b.color)+'"><i></i>'+esc(x.b.name)+' 집행 내역</h4><ul>'+x.sp.map(e=>'<li><small>'+short(e.date)+'</small> ['+esc(e.item)+'] '+(e.vendor?esc(e.vendor)+' · ':'')+esc(e.memo||'')+' — <b>'+won(e.amount)+'</b></li>').join('')+'</ul>').join(''):'<p class="empty">이 기간에 집행 완료된 지출이 없어요</p>';const wp=R.bud.filter(x=>x.pl.length);if(wp.length)h+='<h4>집행 예정 ('+short(addDays(R.T,30))+'까지)</h4><ul>'+wp.flatMap(x=>x.pl.map(e=>'<li><small>'+short(e.date)+'</small> '+esc(x.b.name)+' [' +esc(e.item)+'] '+(e.vendor?esc(e.vendor)+' · ':'')+esc(e.memo||'')+' — '+won(e.amount)+'</li>')).join('')+'</ul>'}
   h+='<h3>'+(n++)+'. 향후 추진계획 <small style="font-weight:500;color:var(--mute)">('+short(addDays(R.T,1))+' ~ '+short(addDays(R.T,30))+')</small></h3>'+(R.plan.length||R.nod.length?grp([...R.plan,...R.nod],t=>'<li>'+ttl(t)+' <small>'+(t.date?short(t.date):'날짜 미정')+(t.due?' · 마감 '+short(t.due):'')+'</small></li>'):'<p class="empty">없음</p>');
   return h;
 }
@@ -811,7 +973,7 @@ function repText(R){
   if(R.follow.length){L.push('','■ '+(n++)+'. 새로 등록한 후속 업무');grp(R.follow,t=>L.push('   - '+t.title+' ('+(t.date?short(t.date):'날짜 미정')+')'))}
   if(R.bnotes.length){L.push('','■ '+(n++)+'. 사업 메모·의사결정');grp(R.bnotes,x=>L.push('   - '+short(x.date)+' '+(x.kind==='decision'?'[의사결정] ':'')+x.body.replace(/\n/g,' / ')))}
   if(R.dmemo.length){L.push('','■ '+(n++)+'. 날짜 메모');for(const x of R.dmemo)L.push('   - '+short(x.d)+' '+x.text.replace(/\n/g,' / '))}
-  if(R.bud.length){L.push('','■ '+(n++)+'. 예산 집행');for(const x of R.bud){L.push('  ['+x.b.name+'] 예산 '+won(x.B.total)+' / 기간 내 집행 '+won(x.per)+' / 누적 집행 '+won(x.upto)+' ('+pctTxt(x.upto,x.B.total)+') / 잔액 '+won(x.B.total-x.upto));for(const e of x.sp)L.push('   - '+short(e.date)+' ['+e.item+'] '+(e.memo?e.memo+' ':'')+won(e.amount))}}
+  if(R.bud.length){L.push('','■ '+(n++)+'. 예산 집행현황');for(const x of R.bud){L.push('  ['+x.b.name+'] 현재 예산 '+won(x.B.total)+' / 기간 내 집행 '+won(x.per)+' / 누적 집행 '+won(x.upto)+' ('+pctTxt(x.upto,x.B.total)+') / 집행 예정 '+won(x.B.plan)+' / 가용 잔액 '+won(x.B.avail));for(const e of x.sp)L.push('   - '+short(e.date)+' ['+e.item+'] '+(e.vendor?e.vendor+' · ':'')+(e.memo?e.memo+' ':'')+won(e.amount));for(const e of x.pl)L.push('   - (예정) '+short(e.date)+' ['+e.item+'] '+(e.vendor?e.vendor+' · ':'')+(e.memo?e.memo+' ':'')+won(e.amount))}}
   L.push('','■ '+(n++)+'. 향후 추진계획');const pl=[...R.plan,...R.nod];pl.length?grp(pl,t=>L.push('   - '+t.title+' ('+(t.date?short(t.date):'날짜 미정')+(t.due?', 마감 '+short(t.due):'')+')')):L.push('  없음');
   return L.join('\n');
 }
@@ -821,48 +983,202 @@ function repCsv(R){
   R.done.forEach(t=>row('완료',t));R.open.forEach(t=>row('진행 중·미완료',t));R.other.forEach(t=>row('그 밖의 처리 기록',t));R.follow.forEach(t=>row('새 후속 업무',t));R.plan.forEach(t=>row('향후 계획',t));R.nod.forEach(t=>row('날짜 미정',t));
   if(R.bnotes.length){rows.push([],['날짜','세부사업','종류','사업 메모']);R.bnotes.forEach(x=>rows.push([x.date,bn(x.biz),x.kind==='decision'?'의사결정':'메모',x.body]))}
   if(R.dmemo.length){rows.push([],['날짜','날짜 메모']);R.dmemo.forEach(x=>rows.push([x.d,x.text]))}
-  if(R.bud.length){rows.push([],['세부사업','예산(원)','기간 내 집행(원)','누적 집행(원)','집행률','잔액(원)']);R.bud.forEach(x=>rows.push([x.b.name,x.B.total,x.per,x.upto,pctTxt(x.upto,x.B.total),x.B.total-x.upto]));const sp=R.bud.flatMap(x=>x.sp.map(e=>[e.date,x.b.name,e.item,e.amount,e.memo]));if(sp.length){rows.push([],['지출일','세부사업','예산 항목','금액(원)','내용']);sp.forEach(r=>rows.push(r))}}
+  if(R.bud.length){rows.push([],['세부사업','현재 예산(원)','기간 내 집행(원)','누적 집행(원)','집행률','집행 예정(원)','가용 잔액(원)']);R.bud.forEach(x=>rows.push([x.b.name,x.B.total,x.per,x.upto,pctTxt(x.upto,x.B.total),x.B.plan,x.B.avail]));const sp=R.bud.flatMap(x=>[...x.sp,...x.pl].map(e=>[e.status==='plan'?'집행 예정':'집행 완료',e.date,x.b.name,e.item,e.vendor,e.memo,e.amount]));if(sp.length){rows.push([],['상태','지출일','세부사업','예산 항목','지출처','지출내용','금액(원)']);sp.forEach(r=>rows.push(r))}}
   return '﻿'+rows.map(r=>r.map(csvCell).join(',')).join('\r\n');
 }
+/* ---------- 회의용 한 장 인쇄 (v3.8) ---------- */
+let pmode='print';
+const ps={type:'month',biz:'',done:true,bud:true,memo:true};
+try{const sv=JSON.parse(localStorage.getItem('wp2-print')||'null');if(sv&&typeof sv==='object')for(const k of ['type','done','bud','memo'])if(k in sv)ps[k]=sv[k]}catch(e){}
+function psSave(){try{localStorage.setItem('wp2-print',JSON.stringify({type:ps.type,done:ps.done,bud:ps.bud,memo:ps.memo}))}catch(e){}}
+function repSwitch(){return '<div class="bseg rsw" role="tablist" aria-label="인쇄·보고 메뉴"><button type="button" role="tab" data-act="pmode" data-m="print" aria-selected="'+(pmode==='print')+'">회의용 한 장 인쇄</button><button type="button" role="tab" data-act="pmode" data-m="report" aria-selected="'+(pmode==='report')+'">업무보고서</button></div>'}
+function psRange(){if(ps.type==='week'){const ws=weekStart(cur);return [ws,addDays(ws,6)]}const d=parse(cur),y=d.getFullYear(),m=d.getMonth();return [ymd(new Date(y,m,1)),ymd(new Date(y,m+1,0))]}
+function psTitle(){const [F,T]=psRange(),f=parse(F),t=parse(T);return ps.type==='week'?(f.getMonth()+1)+'월 '+f.getDate()+'일 – '+(t.getMonth()+1)+'월 '+t.getDate()+'일 주간 업무표':f.getFullYear()+'년 '+(f.getMonth()+1)+'월 업무 계획표'}
+function psData(){
+  const [F,T]=psRange(),bl=bizList(),bm=bizMap(),td=today();
+  const scope=ps.biz?bl.filter(b=>b.id===ps.biz):bl;
+  const all=items().filter(t=>!t.parent&&(!ps.biz||t.biz===ps.biz));
+  const vis=all.filter(t=>ps.done||!t.done);
+  const ent={};const add=(k,o)=>{(ent[k]=ent[k]||[]).push(o)};
+  for(const t of vis){
+    if(t.date&&t.date<=T&&eEnd(t)>=F){const k=t.date<F?F:t.date;add(k,{k:'t',t,span:eEnd(t)!==t.date?eEnd(t):''})}
+    if(t.due&&t.due>=F&&t.due<=T&&t.due!==t.date)add(t.due,{k:'due',t});
+  }
+  const spends=[];
+  if(ps.bud)for(const b of scope)for(const x of budOf(b).items)for(const e of x.spends)if(e.status==='plan'&&e.date>=F&&e.date<=T){spends.push({b,x,e});add(e.date,{k:'sp',b,x,e})}
+  const pr={urgent:0,important:1,normal:2};
+  for(const k in ent)ent[k].sort((a,c)=>(a.k==='sp')-(c.k==='sp')||((a.t&&a.t.time)||'99').localeCompare((c.t&&c.t.time)||'99')||(pr[a.t&&a.t.prio]??3)-(pr[c.t&&c.t.prio]??3));
+  const dues=all.filter(t=>!t.done&&t.due&&t.due>=F&&t.due<=T).sort((a,c)=>a.due.localeCompare(c.due));
+  const late=all.filter(t=>isOver(t)).sort((a,c)=>(a.due||a.date).localeCompare(c.due||c.date));
+  const bz=scope.map(b=>{const s=bstats(all,b),B=budOf(b),ph=b.phases||[],pd=ph.filter(p=>p.done).length,nx=ph.find(p=>!p.done);return {b,s,B,ph,pd,nx}});
+  return {F,T,bm,ent,spends:spends.sort((a,c)=>a.e.date.localeCompare(c.e.date)),dues,late,bz,td,scope};
+}
+function psLine(o,bm,compact){
+  if(o.k==='sp')return '<li class="psp"><span class="qpm">₩</span>'+esc(o.x.name)+(o.e.memo?' · '+esc(o.e.memo):'')+' <b>'+(o.e.amount>=10000?Math.round(o.e.amount/1000)/10+'만':o.e.amount.toLocaleString('ko-KR'))+'</b></li>';
+  const t=o.t,b=bm[t.biz];
+  return '<li class="'+(t.done?'qdone':'')+(o.k==='due'?' due':'')+'" style="'+cv(b?b.color:'b7')+'"><span class="qbx">'+(t.done?'✓':'')+'</span>'+(o.k==='due'?'<span class="qdl">마감</span>':'')+(t.time&&!compact?'<span class="qtm">'+t.time+'</span>':'')+(t.prio==='urgent'&&!t.done?'<span class="qur">!</span>':'')+esc(t.title)+(o.span?'<span class="qsp"> ~'+short(o.span).replace(/\(.\)/,'')+'</span>':'')+'</li>';
+}
+function psSheet(){
+  const D=psData(),bm=D.bm,DOWK=['월','화','수','목','금','토','일'];
+  let h='<article class="psheet '+ps.type+'" id="psheet"><header class="psh"><div><h1>'+psTitle()+'</h1><p>'+(ps.biz&&D.scope[0]?esc(D.scope[0].name):'전체 세부사업')+'</p></div><div class="pso">출력 '+short(D.td).replace(/\(.\)/,'')+'<br><span class="qlg"><span class="qbx"></span>할 일 <span class="qdl">마감</span>'+(ps.bud?' <span class="qpm">₩</span>예정 지출':'')+'</span></div></header>';
+  if(ps.type==='month'){
+    const f=parse(D.F),y=f.getFullYear(),m=f.getMonth(),off=(new Date(y,m,1).getDay()+6)%7,dim=new Date(y,m+1,0).getDate(),wk=Math.ceil((off+dim)/7),MAX=wk>5?4:5;
+    h+='<div class="pcal" style="grid-template-rows:auto repeat('+wk+',1fr)">'+DOWK.map((d,i)=>'<div class="pdw'+(i===6?' sun':i===5?' sat':'')+'">'+d+'</div>').join('');
+    for(let i=0;i<wk*7;i++){const dd=new Date(y,m,1-off+i),k=ymd(dd),inm=dd.getMonth()===m,es=inm?(D.ent[k]||[]):[];
+      h+='<div class="pdc'+(inm?'':' out')+(k===D.td?' now':'')+'"><span class="qn'+(dd.getDay()===0?' sun':dd.getDay()===6?' sat':'')+'">'+dd.getDate()+'</span>'+(es.length?'<ul>'+es.slice(0,MAX).map(o=>psLine(o,bm,true)).join('')+'</ul>'+(es.length>MAX?'<span class="more2">+'+(es.length-MAX)+'개 더</span>':''):'')+'</div>'}
+    h+='</div>';
+  }else{
+    h+='<table class="pwk"><tbody>';
+    for(let i=0;i<7;i++){const k=addDays(D.F,i),dd=parse(k),es=D.ent[k]||[];
+      h+='<tr class="'+(k===D.td?'now':'')+'"><th><b class="'+(i===6?'sun':i===5?'sat':'')+'">'+DOWK[i]+'</b><span>'+(dd.getMonth()+1)+'/'+dd.getDate()+'</span></th><td class="qt">'+(es.length?'<ul>'+es.map(o=>psLine(o,bm,false)).join('')+'</ul>':'')+'</td><td class="pmemo"></td></tr>'}
+    h+='</tbody></table>';
+  }
+  // bottom: 사업별 현황 + 마감·예정
+  h+='<div class="pbot"><section><h2>사업별 현황</h2>'+(D.bz.length?'<table class="ptb"><thead><tr><th>세부사업</th><th>추진 단계</th><th class="n">할 일</th>'+(ps.bud?'<th class="n">집행률</th><th class="n">가용 잔액</th>':'')+'</tr></thead><tbody>'+D.bz.map(({b,s,B,ph,pd,nx})=>'<tr style="'+cv(b.color)+'"><td><i class="qdot"></i>'+esc(b.name)+'</td><td>'+(ph.length?pd+'/'+ph.length+(nx?' · 다음: '+esc(nx.name):' · 완료'):'-')+'</td><td class="n">'+s.done+'/'+s.total+(s.over?' <b class="hot">밀림 '+s.over+'</b>':'')+'</td>'+(ps.bud?'<td class="n">'+(B.items.length?pctTxt(B.done,B.total):'-')+'</td><td class="n">'+(B.items.length?'<b class="'+(B.avail<0?'hot':'')+'">'+won(B.avail)+'</b>':'-')+'</td>':'')+'</tr>').join('')+'</tbody></table>':'<p class="pe">세부사업이 없어요</p>')+'</section>';
+  h+='<section><h2>'+(ps.type==='week'?'이번 주':'이번 달')+' 마감·예정</h2><ul class="plist">'+(D.late.length?'<li class="hot"><b>밀린 일 '+D.late.length+'개</b>: '+D.late.slice(0,4).map(t=>esc(t.title)).join(', ')+(D.late.length>4?' 외':'')+'</li>':'')+D.dues.map(t=>'<li><span class="qpd">'+short(t.due).replace(/\(.\)/,'')+'</span><span class="qdl">마감</span>'+esc(t.title)+'</li>').join('')+D.spends.map(o=>'<li><span class="qpd">'+short(o.e.date).replace(/\(.\)/,'')+'</span><span class="qpm">₩</span>'+esc(o.b.name)+' · '+esc(o.x.name)+(o.e.vendor?' · '+esc(o.e.vendor):'')+' <b>'+won(o.e.amount)+'</b></li>').join('')+(!D.late.length&&!D.dues.length&&!D.spends.length?'<li class="pe">마감이나 예정 지출이 없어요</li>':'')+'</ul></section></div>';
+  if(ps.memo)h+='<section class="pnote"><h2>메모</h2><div class="qlines">'+'<i></i>'.repeat(ps.type==='week'?4:5)+'</div></section>';
+  return h+'</article>';
+}
+function renderPrint(){
+  const bl=bizList();if(ps.biz&&!bl.some(b=>b.id===ps.biz))ps.biz='';
+  put($('#vRep'),repSwitch()+'<div class="rep"><section class="card pane side" style="gap:12px"><h2>회의용 한 장 인쇄</h2><p class="sub" style="margin:0">종이 달력 사이에 끼워 다닐 수 있게 A4 한 장으로 뽑아요. 위쪽 ‹ › 로 달·주를 옮겨요.</p><label class="f">종류<select id="psType"><option value="month"'+(ps.type==='month'?' selected':'')+'>월간 (달력 + 사업 현황)</option><option value="week"'+(ps.type==='week'?' selected':'')+'>주간 (요일별 + 메모 칸)</option></select></label><label class="f">세부사업<select id="psBiz">'+bizOpts(bl,ps.biz,'전체 세부사업')+'</select></label><label class="ck"><input type="checkbox" id="psDone"'+(ps.done?' checked':'')+'> 완료한 일도 표시</label><label class="ck"><input type="checkbox" id="psBud"'+(ps.bud?' checked':'')+'> 예정 지출·예산 현황 넣기</label><label class="ck"><input type="checkbox" id="psMemo"'+(ps.memo?' checked':'')+'> 손글씨 메모 칸 넣기</label><button type="button" class="btn" data-act="psprint">인쇄하기</button><button type="button" class="btn ghost" data-act="psfile">인쇄용 파일 저장</button><p class="note" style="margin:0">PDF로 받으려면 인쇄 창에서 \'PDF로 저장\'을 고르세요. 인쇄 창이 안 뜨면 \'인쇄용 파일 저장\' 후 그 파일을 열어 인쇄하세요.</p></section><div class="pwrap">'+psSheet()+'</div></div>');
+}
+function doPrint(){
+  let r=$('#printRoot');if(r)r.remove();r=document.createElement('div');r.id='printRoot';r.innerHTML=psSheet();document.body.appendChild(r);document.body.classList.add('printing');
+  const done=()=>{document.body.classList.remove('printing');const x=$('#printRoot');if(x)x.remove();removeEventListener('afterprint',done)};
+  addEventListener('afterprint',done);
+  try{window.print()}catch(e){done();toast('이 화면에서는 인쇄 창을 열 수 없어요. \'인쇄용 파일 저장\'을 눌러 주세요.',false,true);return}
+  setTimeout(()=>{if(document.body.classList.contains('printing')&&!matchMedia('print').matches)done()},60000);
+}
+addEventListener('beforeprint',()=>{if(view==='rep'&&pmode==='print'&&!$('#printRoot')){const r=document.createElement('div');r.id='printRoot';r.innerHTML=psSheet();document.body.appendChild(r);document.body.classList.add('printing');const done=()=>{document.body.classList.remove('printing');const x=$('#printRoot');if(x)x.remove();removeEventListener('afterprint',done)};addEventListener('afterprint',done)}});
+
 function renderRep(){
+  if(pmode==='print'){renderPrint();return}
   const bl=bizList();if(rp.biz&&!bl.some(b=>b.id===rp.biz))rp.biz='';
   const [F,T]=rp.type==='custom'?[rp.from||cur,rp.to||cur]:rpRange();
-  put($('#vRep'),'<div class="rep"><section class="card pane side" style="gap:12px"><h2>보고서 만들기</h2><label class="f">보고서 종류<select id="rpType">'+Object.entries(RPT).map(([k,v])=>'<option value="'+k+'"'+(k===rp.type?' selected':'')+'>'+v+'</option>').join('')+'</select></label><label class="f">세부사업<select id="rpBiz">'+bizOpts(bl,rp.biz,'전체 세부사업')+'</select></label><div class="g2"><label class="f">시작<input type="date" id="rpFrom" value="'+F+'"></label><label class="f">끝<input type="date" id="rpTo" value="'+T+'"></label></div><p class="note" style="margin:0">날짜를 바꾸면 기간 지정 보고로 바뀌어요. 기준일은 위쪽 날짜 이동과 같아요.</p><button type="button" class="btn" data-act="repcopy">텍스트로 복사</button><button type="button" class="btn ghost" data-act="repcsv">엑셀용 파일 내려받기</button><button type="button" class="btn ghost" data-act="rephtml">보고서 파일 저장 (인쇄용)</button></section><article class="card rpo" id="rpOut">'+repHtml(repData())+'</article></div>');
+  put($('#vRep'),repSwitch()+'<div class="rep"><section class="card pane side" style="gap:12px"><h2>보고서 만들기</h2><label class="f">보고서 종류<select id="rpType">'+Object.entries(RPT).map(([k,v])=>'<option value="'+k+'"'+(k===rp.type?' selected':'')+'>'+v+'</option>').join('')+'</select></label><label class="f">세부사업<select id="rpBiz">'+bizOpts(bl,rp.biz,'전체 세부사업')+'</select></label><div class="g2"><label class="f">시작<input type="date" id="rpFrom" value="'+F+'"></label><label class="f">끝<input type="date" id="rpTo" value="'+T+'"></label></div><p class="note" style="margin:0">날짜를 바꾸면 기간 지정 보고로 바뀌어요. 기준일은 위쪽 날짜 이동과 같아요.</p><button type="button" class="btn" data-act="repcopy">텍스트로 복사</button><button type="button" class="btn ghost" data-act="repcsv">엑셀용 파일 내려받기</button><button type="button" class="btn ghost" data-act="rephtml">보고서 파일 저장 (인쇄용)</button></section><article class="card rpo" id="rpOut">'+repHtml(repData())+'</article></div>');
 }
 
-/* ---------- budget (예산) ---------- */
+/* ---------- budget (예산) v3.7 ---------- */
 const won=n=>(Math.round(Number(n)||0)).toLocaleString('ko-KR')+'원';
+const num=v=>Math.round(Number(String(v??'').replace(/[^\d.-]/g,''))||0);
 const pctTxt=(a,b)=>b>0?Math.round(a/b*1000)/10+'%':'-';
+const fmtIn=n=>n?Math.round(n).toLocaleString('ko-KR'):'';
+function normSpend(e,j){const st=e.status==='plan'?'plan':'done',amt=Number(e.amount)||0;return {id:String(e.id||'e'+j),status:st,date:isDay(e.date)?e.date:'',vendor:String(e.vendor||''),memo:String(e.memo||''),amount:amt,planDate:isDay(e.planDate)?e.planDate:(st==='plan'&&isDay(e.date)?e.date:''),planAmount:e.planAmount!=null?Number(e.planAmount)||0:(st==='plan'?amt:0),at:e.at||'',doneAt:e.doneAt||''}}
+function normItem(x,i){
+  const orig=x.orig!=null?Number(x.orig)||0:Number(x.amount)||0;
+  const changes=(Array.isArray(x.changes)?x.changes:[]).filter(c=>c&&typeof c==='object').map((c,j)=>({id:String(c.id||'c'+j),date:isDay(c.date)?c.date:'',delta:Number(c.delta)||0,reason:String(c.reason||''),at:c.at||''}));
+  const cur=orig+changes.reduce((s,c)=>s+c.delta,0);
+  const sp=(Array.isArray(x.spends)?x.spends:[]).filter(e=>e&&typeof e==='object').map(normSpend).sort((a,c)=>(a.date||'9').localeCompare(c.date||'9'));
+  const done=sp.filter(e=>e.status==='done').reduce((s,e)=>s+e.amount,0),plan=sp.filter(e=>e.status==='plan').reduce((s,e)=>s+e.amount,0);
+  return {id:String(x.id||'i'+i),name:String(x.name||'항목'),basis:String(x.basis||''),orig,changes,cur,amount:cur,spends:sp,done,plan,used:done,avail:cur-done-plan,left:cur-done};
+}
 function budOf(b){
   const raw=S.biz[b.id]||{},arr=Array.isArray(raw.budget)?raw.budget:[];
-  const its=arr.filter(x=>x&&typeof x==='object').map((x,i)=>{const sp=(Array.isArray(x.spends)?x.spends:[]).filter(e=>e&&typeof e==='object').map((e,j)=>({id:String(e.id||'e'+j),date:isDay(e.date)?e.date:'',amount:Number(e.amount)||0,memo:String(e.memo||'')})).sort((a,c)=>(a.date||'9').localeCompare(c.date||'9'));const used=sp.reduce((s,e)=>s+e.amount,0),amt=Number(x.amount)||0;return {id:String(x.id||'i'+i),name:String(x.name||'항목'),amount:amt,spends:sp,used,left:amt-used}});
-  const total=its.reduce((s,x)=>s+x.amount,0),used=its.reduce((s,x)=>s+x.used,0);
-  return {items:its,total,used,left:total-used,pct:total>0?used/total*100:0};
+  const its=arr.filter(x=>x&&typeof x==='object').map(normItem);
+  const sum=k=>its.reduce((s,x)=>s+x[k],0),total=sum('cur'),done=sum('done'),plan=sum('plan'),orig=sum('orig');
+  return {items:its,orig,total,done,plan,used:done,avail:total-done-plan,left:total-done,pct:total>0?done/total*100:0};
 }
-function putBud(bid,fn){const raw=S.biz[bid];if(!raw)return null;const old=raw;store.put('biz',bid,{...raw,budget:fn((Array.isArray(raw.budget)?raw.budget:[]).map(x=>({...x,spends:Array.isArray(x.spends)?[...x.spends]:[]})))});return old}
-let budOpen=new Set(),budEdit=null,spEdit=null;
-function budBar(pct,el){const p=Math.min(100,pct);return '<div class="pbar bb'+(pct>100?' over':'')+'"><i style="width:'+p+'%"></i>'+(el!==null&&el!==undefined?'<em style="left:calc('+el+'% - 1px)" title="기간 경과 '+el+'%"></em>':'')+'</div>'}
-function renderBudget(list,bl){
-  const show=filter?bl.filter(b=>b.id===filter):bl,td=today();
-  const all=show.map(b=>({b,B:budOf(b),el:bstats(list,b).el}));
-  const T=all.reduce((s,x)=>s+x.B.total,0),U=all.reduce((s,x)=>s+x.B.used,0);
-  let h='<section class="card pane budtop"><div class="row" style="flex-wrap:nowrap;align-items:center;gap:14px"><svg class="mini big" viewBox="0 0 64 64" aria-hidden="true">'+chickSVG('coin')+'</svg><div style="flex:1"><h2>'+(filter&&show[0]?esc(show[0].name)+' 예산':'전체 예산 집행 현황')+'</h2><p class="sub" style="margin:2px 0 0">항목별 지출을 기록하면 집행액·잔액·집행률이 자동으로 합산돼요.</p></div></div><div class="sumg" style="margin-top:12px"><div><b>'+won(T)+'</b><span>총 예산</span></div><div><b>'+won(U)+'</b><span>총 집행액</span></div><div><b class="'+(T-U<0?'hot':'')+'">'+won(T-U)+'</b><span>잔액</span></div><div><b class="'+(U>T&&T>0?'hot':'')+'">'+pctTxt(U,T)+'</b><span>총 집행률</span></div></div>'+budBar(T>0?U/T*100:0,null)+'</section>';
-  if(!bl.length)h+='<section class="card pane" style="margin-top:16px">'+miniChick('wave','세부사업을 먼저 만들어 주세요. 월간 화면 오른쪽 \'+ 세부사업\'에서 만들 수 있어요.')+'</section>';
-  for(const {b,B,el} of all){
-    const id=esc(b.id);
-    h+='<section class="card pane bud" style="'+cv(b.color)+';margin-top:16px"><div class="budh"><i></i><h2>'+esc(b.name)+'</h2><span class="budn">'+won(B.used)+' / '+won(B.total)+' · <b class="'+(B.used>B.total&&B.total>0?'hot':'')+'">'+pctTxt(B.used,B.total)+'</b></span></div>'+budBar(B.pct,el)+'<p class="note" style="margin:0 0 8px">잔액 <b class="'+(B.left<0?'hot':'')+'">'+won(B.left)+'</b>'+(el!==null?' · 사업 기간 '+el+'% 경과':'')+(B.used>B.total&&B.total>0?' · <span class="hot">예산을 초과했어요</span>':'')+'</p>';
-    if(B.items.length){
-      h+='<div class="scroll"><table class="bt"><thead><tr><th>항목</th><th class="n">예산</th><th class="n">집행</th><th class="n">잔액</th><th class="n">집행률</th><th></th></tr></thead><tbody>';
-      for(const x of B.items){const op=budOpen.has(x.id),xid=esc(x.id);
-        if(budEdit===x.id)h+='<tr><td colspan="6"><form class="row" data-be="'+id+'" data-iid="'+xid+'"><input type="text" name="name" value="'+esc(x.name)+'" aria-label="항목명" maxlength="40" style="flex:2 1 160px"><input type="number" name="amount" value="'+x.amount+'" min="0" step="1" aria-label="예산액(원)" style="flex:1 1 120px"><button class="btn sm">저장</button><button type="button" class="btn ghost sm" data-act="becancel">취소</button></form></td></tr>';
-        else h+='<tr class="bi'+(op?' op':'')+'"><td><button type="button" class="lk bn" data-act="btog" data-iid="'+xid+'" aria-expanded="'+op+'">'+(op?'▾ ':'▸ ')+esc(x.name)+'</button> <small class="note" style="display:inline">'+x.spends.length+'건</small></td><td class="n">'+won(x.amount)+'</td><td class="n">'+won(x.used)+'</td><td class="n'+(x.left<0?' hot':'')+'">'+won(x.left)+'</td><td class="n'+(x.used>x.amount&&x.amount>0?' hot':'')+'">'+pctTxt(x.used,x.amount)+'</td><td class="n"><span class="ia" style="justify-content:flex-end"><button type="button" class="ic" data-act="bedit" data-iid="'+xid+'" aria-label="항목 수정">'+IC.edit+'</button><button type="button" class="ic" data-act="bdelit" data-id="'+id+'" data-iid="'+xid+'" aria-label="항목 삭제">'+IC.del+'</button></span></td></tr>';
-        if(op){h+='<tr class="sp"><td colspan="6"><div class="spw">'+(x.spends.length?'<ul class="spl">'+x.spends.map(e=>spEdit===e.id?'<li><form class="row" data-se="'+id+'" data-iid="'+xid+'" data-eid="'+esc(e.id)+'"><input type="date" name="date" value="'+e.date+'" aria-label="지출일" style="flex:0 1 150px"><input type="number" name="amount" value="'+e.amount+'" min="0" step="1" aria-label="금액(원)" style="flex:0 1 130px"><input type="text" name="memo" value="'+esc(e.memo)+'" aria-label="내용" maxlength="100" style="flex:2 1 160px"><button class="btn sm">저장</button><button type="button" class="btn ghost sm" data-act="secancel">취소</button></form></li>':'<li><span class="sd">'+(e.date?short(e.date):'날짜 없음')+'</span><span class="sm">'+esc(e.memo||'(내용 없음)')+'</span><b class="sa">'+won(e.amount)+'</b><span class="ia"><button type="button" class="ic" data-act="sedit" data-eid="'+esc(e.id)+'" aria-label="지출 수정">'+IC.edit+'</button><button type="button" class="ic" data-act="sdel" data-id="'+id+'" data-iid="'+xid+'" data-eid="'+esc(e.id)+'" aria-label="지출 삭제">'+IC.del+'</button></span></li>').join('')+'</ul>':'<p class="empty" style="margin:0 0 8px">아직 지출 기록이 없어요.</p>')+'<form class="row spf" data-sf="'+id+'" data-iid="'+xid+'"><input type="date" name="date" value="'+td+'" aria-label="지출일" style="flex:0 1 150px"><input type="number" name="amount" id="sfa-'+xid+'" placeholder="금액(원)" min="0" step="1" aria-label="금액(원)" style="flex:0 1 130px"><input type="text" name="memo" placeholder="내용 (예: 간식 구입 55세트)" aria-label="내용" maxlength="100" style="flex:2 1 160px"><button class="btn sm">지출 추가</button></form></div></td></tr>'}
-      }
-      h+='</tbody><tfoot><tr><th>합계</th><th class="n">'+won(B.total)+'</th><th class="n">'+won(B.used)+'</th><th class="n'+(B.left<0?' hot':'')+'">'+won(B.left)+'</th><th class="n">'+pctTxt(B.used,B.total)+'</th><th></th></tr></tfoot></table></div>';
-    }else h+=miniChick('coin','예산 항목을 추가해 보세요. 예: 강사비, 간식비, 홍보물 제작비');
-    h+='<form class="row" data-bf="'+id+'" style="margin-top:10px"><input type="text" name="name" id="bfn-'+id+'" placeholder="예산 항목 (예: 강사비)" aria-label="예산 항목" maxlength="40" style="flex:2 1 160px"><input type="number" name="amount" placeholder="예산액(원)" min="0" step="1" aria-label="예산액(원)" style="flex:1 1 130px"><button class="btn sm">항목 추가</button></form></section>';
+/* write back: keep legacy 'amount' = current budget so older versions still read it */
+function putBud(bid,fn){const raw=S.biz[bid];if(!raw)return null;const old=raw;
+  const cur=(Array.isArray(raw.budget)?raw.budget:[]).filter(x=>x&&typeof x==='object').map((x,i)=>{const n=normItem(x,i);return {...x,id:n.id,name:n.name,basis:n.basis,orig:n.orig,changes:n.changes,spends:n.spends.map(e=>({...e}))}});
+  const next=fn(cur).map(x=>{const n=normItem(x,0);return {...x,amount:n.cur}});
+  store.put('biz',bid,{...raw,budget:next});return old}
+let budOpen=new Set(),budSet=new Set(),budLast={},budEdit=null,spEdit=null,spDone=null,budChg=null,budMode='biz',budQ='',budYear=new Date().getFullYear(),budSt={};
+function stackBar(cur,done,plan,el){
+  const base=Math.max(cur,done+plan,1),d=done/base*100,p=plan/base*100,over=done+plan>cur&&cur>=0&&(done+plan)>0;
+  return '<div class="sbar'+(over?' over':'')+'" role="img" aria-label="집행 완료 '+won(done)+', 집행 예정 '+won(plan)+', 가용 잔액 '+won(cur-done-plan)+'"><i class="d" style="width:'+d+'%"></i><i class="p" style="width:'+p+'%"></i>'+(el!==null&&el!==undefined?'<em style="left:calc('+el+'% - 1px)" title="사업 기간 '+el+'% 경과"></em>':'')+'</div>';
+}
+const legend='<div class="lgd"><span><i class="d"></i>집행 완료</span><span><i class="p"></i>집행 예정</span><span><i class="a"></i>가용 잔액</span></div>';
+function budKpi(B,big){return '<div class="kpi'+(big?' big':'')+'"><div><span>현재 예산</span><b>'+won(B.total)+'</b>'+(B.total!==B.orig?'<small>당초 '+won(B.orig)+' · '+(B.total-B.orig>0?'+':'')+won(B.total-B.orig)+'</small>':'')+'</div><div><span>집행 완료</span><b>'+won(B.done)+'</b></div><div><span>집행 예정</span><b>'+won(B.plan)+'</b></div><div class="av'+(B.avail<0?' neg':'')+'"><span>가용 잔액</span><b>'+won(B.avail)+'</b></div><div><span>집행률(완료 기준)</span><b class="'+(B.done>B.total&&B.total>0?'hot':'')+'">'+pctTxt(B.done,B.total)+'</b></div></div>'}
+function budScope(bl){const q=budQ.trim().toLowerCase();let a=filter?bl.filter(b=>b.id===filter):bl;if(q)a=a.filter(b=>b.name.toLowerCase().includes(q)||budOf(b).items.some(x=>x.name.toLowerCase().includes(q)));return a}
+function monthAgg(scope,Y){
+  const M=Array.from({length:12},(_,i)=>({m:i+1,plan:0,act:0,open:0}));
+  for(const b of scope)for(const x of budOf(b).items)for(const e of x.spends){
+    if(e.planDate&&+e.planDate.slice(0,4)===Y)M[+e.planDate.slice(5,7)-1].plan+=e.planAmount||e.amount;
+    if(e.status==='done'&&e.date&&+e.date.slice(0,4)===Y)M[+e.date.slice(5,7)-1].act+=e.amount;
+    if(e.status==='plan'&&e.date&&+e.date.slice(0,4)===Y)M[+e.date.slice(5,7)-1].open+=e.amount;
   }
-  put($('#vBud'),h);
+  let cp=0,ca=0;for(const r of M){cp+=r.plan;ca+=r.act;r.cp=cp;r.ca=ca}return M;
+}
+function monthChart(M){
+  const W=720,H=230,L=64,B=28,T=14,mx=Math.max(1,...M.map(r=>Math.max(r.plan,r.act))),sc=v=>(H-B-T)*v/mx,bw=(W-L-10)/12;
+  const step=(()=>{const r=mx/4,p=Math.pow(10,Math.floor(Math.log10(r)));return Math.ceil(r/p)*p})();
+  let g='';for(let v=0;v<=mx*1.001;v+=step){const y=H-B-sc(v);g+='<line x1="'+L+'" x2="'+(W-6)+'" y1="'+y+'" y2="'+y+'" class="gl"/><text x="'+(L-6)+'" y="'+(y+4)+'" text-anchor="end" class="ax">'+(v>=10000?Math.round(v/10000).toLocaleString('ko-KR')+'만':v.toLocaleString('ko-KR'))+'</text>'}
+  const bars=M.map((r,i)=>{const x=L+i*bw+bw*.14,w=bw*.34;return '<rect x="'+x+'" y="'+(H-B-sc(r.plan))+'" width="'+w+'" height="'+sc(r.plan)+'" class="bp" rx="3"><title>'+r.m+'월 계획 '+won(r.plan)+'</title></rect><rect x="'+(x+w+2)+'" y="'+(H-B-sc(r.act))+'" width="'+w+'" height="'+sc(r.act)+'" class="ba" rx="3"><title>'+r.m+'월 실적 '+won(r.act)+'</title></rect><text x="'+(L+i*bw+bw/2)+'" y="'+(H-8)+'" text-anchor="middle" class="ax">'+r.m+'월</text>'}).join('');
+  return '<svg class="mchart" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="월별 집행계획 대비 실적 막대그래프">'+g+bars+'</svg><div class="lgd"><span><i class="p"></i>집행계획(예정으로 등록한 금액)</span><span><i class="d"></i>집행실적(완료)</span></div>';
+}
+function spendForm(id,B,o){o=o||{};const sel=budLast[id]&&B.items.some(x=>x.id===budLast[id])?budLast[id]:B.items[0].id,st=budSt[id]||'done';
+  return '<form class="spf" data-sf="'+id+'"><div class="rseg" role="radiogroup" aria-label="지출 상태"><label><input type="radio" name="status" value="done"'+(st==='done'?' checked':'')+'><span>집행 완료</span></label><label><input type="radio" name="status" value="plan"'+(st==='plan'?' checked':'')+'><span>집행 예정</span></label></div><div class="fgrid"><label class="f wide">예산 항목<select name="item">'+B.items.map(x=>'<option value="'+esc(x.id)+'"'+(x.id===sel?' selected':'')+'>'+esc(x.name)+' (가용 '+won(x.avail)+')</option>').join('')+'</select></label><label class="f">지출일<input type="date" name="date" value="'+today()+'"></label><label class="f">지출처<input type="text" name="vendor" placeholder="예: ○○제과" maxlength="40"></label><label class="f wide">지출내용<input type="text" name="memo" placeholder="예: 프로그램 간식 55세트" maxlength="100"></label><label class="f">금액(원)<input type="text" inputmode="numeric" class="money" name="amount" id="sfa-'+id+'" placeholder="0" autocomplete="off"></label><div class="f fbtn"><button class="btn spbtn">기록하기</button></div></div></form>'}
+function spendRow(id,x,e){const xid=esc(x.id),eid=esc(e.id);
+  if(spEdit===e.id)return '<li class="ed"><form data-se="'+id+'" data-iid="'+xid+'" data-eid="'+eid+'" class="fgrid"><label class="f">상태<select name="status"><option value="done"'+(e.status==='done'?' selected':'')+'>집행 완료</option><option value="plan"'+(e.status==='plan'?' selected':'')+'>집행 예정</option></select></label><label class="f">지출일<input type="date" name="date" value="'+e.date+'"></label><label class="f">지출처<input type="text" name="vendor" value="'+esc(e.vendor)+'" maxlength="40"></label><label class="f wide">지출내용<input type="text" name="memo" value="'+esc(e.memo)+'" maxlength="100"></label><label class="f">금액(원)<input type="text" inputmode="numeric" class="money" name="amount" value="'+fmtIn(e.amount)+'"></label><div class="f fbtn row"><button class="btn sm">저장</button><button type="button" class="btn ghost sm" data-act="secancel">취소</button></div></form></li>';
+  if(spDone===e.id)return '<li class="ed"><form data-sd="'+id+'" data-iid="'+xid+'" data-eid="'+eid+'" class="fgrid"><p class="f wide" style="margin:0"><b>집행 완료로 바꾸기</b> · 실제 지출일과 금액을 확인해 주세요</p><label class="f">실제 지출일<input type="date" name="date" value="'+today()+'"></label><label class="f">실제 금액(원)<input type="text" inputmode="numeric" class="money" name="amount" value="'+fmtIn(e.amount)+'"></label><div class="f fbtn row"><button class="btn sm spbtn">완료 처리</button><button type="button" class="btn ghost sm" data-act="sdcancel">취소</button></div></form></li>';
+  return '<li class="'+e.status+'"><span class="chip '+e.status+'">'+(e.status==='plan'?'예정':'완료')+'</span><span class="sd">'+(e.date?short(e.date):'날짜 없음')+'</span><span class="sm">'+(e.vendor?'<b class="vd">'+esc(e.vendor)+'</b> ':'')+esc(e.memo||(e.vendor?'':'(내용 없음)'))+(e.status==='done'&&e.planDate&&e.planAmount&&(e.planAmount!==e.amount||e.planDate!==e.date)?' <small class="note" style="display:inline">· 예정 '+short(e.planDate)+' '+won(e.planAmount)+'</small>':'')+'</span><b class="sa">'+won(e.amount)+'</b><span class="ia">'+(e.status==='plan'?'<button type="button" class="sbtn" data-act="sdone" data-eid="'+eid+'">완료 처리</button>':'')+'<button type="button" class="ic" data-act="sedit" data-eid="'+eid+'" aria-label="지출 수정">'+IC.edit+'</button><button type="button" class="ic" data-act="sdel" data-id="'+id+'" data-iid="'+xid+'" data-eid="'+eid+'" aria-label="지출 삭제">'+IC.del+'</button></span></li>'}
+function bizBudCard(b,B,el){
+  const id=esc(b.id),has=B.items.length>0,setOpen=budSet.has(b.id),over=B.done+B.plan>B.total&&has;
+  if(!has&&!setOpen)return '<section class="card pane bud mini0" style="'+cv(b.color)+'"><div class="budh"><i></i><h2>'+esc(b.name)+'</h2><span class="note" style="display:inline">예산 미설정</span><button type="button" class="btn ghost sm" data-act="bset" data-id="'+id+'" style="margin-left:auto">예산 설정하기</button></div></section>';
+  let h='<section class="card pane bud" style="'+cv(b.color)+'"><div class="budh"><i></i><h2>'+esc(b.name)+'</h2>'+(over?'<span class="warnb">⚠ 예산 초과 '+won(B.done+B.plan-B.total)+'</span>':'')+'</div>'+budKpi(B)+stackBar(B.total,B.done,B.plan,el)+'<p class="note" style="margin:2px 0 12px">'+(el!==null?'세로선: 사업 기간 '+el+'% 경과 · ':'')+'예정 포함 '+pctTxt(B.done+B.plan,B.total)+' 소진 예상</p>';
+  // ① 예산 설정
+  h+='<div class="bstep bset'+(setOpen||!has?' on':'')+'"><button type="button" class="bsh" data-act="bset" data-id="'+id+'" aria-expanded="'+(setOpen||!has)+'"><span class="bno">①</span><b>예산 설정</b><span class="note" style="display:inline;margin-left:6px">'+(has?'항목 '+B.items.length+'개 · 당초 '+won(B.orig)+(B.total!==B.orig?' → 현재 '+won(B.total):''):'예산 항목과 당초 예산, 산출근거를 정해 주세요')+'</span>'+(has?'<span class="bchev">'+(setOpen?'접기 ▴':'항목·변경 관리 ▾')+'</span>':'')+'</button>';
+  if(setOpen||!has){
+    h+='<div class="bsb">';
+    if(has)h+='<ul class="bsl">'+B.items.map(x=>{const xid=esc(x.id);
+      if(budEdit===x.id)return '<li class="ed"><form data-be="'+id+'" data-iid="'+xid+'" class="fgrid"><label class="f">항목명<input type="text" name="name" value="'+esc(x.name)+'" maxlength="40"></label><label class="f">당초 예산(원)<input type="text" inputmode="numeric" class="money" name="orig" value="'+fmtIn(x.orig)+'"></label><label class="f wide">산출근거<textarea name="basis" rows="2" maxlength="300">'+esc(x.basis)+'</textarea></label><div class="f fbtn row"><button class="btn sm">저장</button><button type="button" class="btn ghost sm" data-act="becancel">취소</button></div></form></li>';
+      let r='<li><div class="bsi"><div class="bsn">'+esc(x.name)+(x.basis?'<small>'+esc(x.basis)+'</small>':'<small class="nob">산출근거 없음</small>')+'</div><div class="bsv"><span>당초 '+won(x.orig)+'</span>'+(x.cur!==x.orig?'<span class="'+(x.cur>x.orig?'up':'dn')+'">'+(x.cur>x.orig?'+':'')+won(x.cur-x.orig)+'</span>':'')+'<b>현재 '+won(x.cur)+'</b></div><span class="ia"><button type="button" class="sbtn" data-act="bchg" data-iid="'+xid+'">예산 변경</button><button type="button" class="ic" data-act="bedit" data-iid="'+xid+'" aria-label="'+esc(x.name)+' 수정">'+IC.edit+'</button><button type="button" class="ic" data-act="bdelit" data-id="'+id+'" data-iid="'+xid+'" aria-label="'+esc(x.name)+' 삭제">'+IC.del+'</button></span></div>';
+      if(x.changes.length)r+='<ul class="chg">'+x.changes.map(c=>'<li><span>'+(c.date?short(c.date):'')+'</span><b class="'+(c.delta>0?'up':'dn')+'">'+(c.delta>0?'+':'')+won(c.delta)+'</b><span class="rs">'+esc(c.reason||'(사유 없음)')+'</span><button type="button" class="ic" data-act="cdel" data-id="'+id+'" data-iid="'+xid+'" data-cid="'+esc(c.id)+'" aria-label="변경 기록 삭제">'+IC.del+'</button></li>').join('')+'</ul>';
+      if(budChg===x.id)r+='<form data-bc="'+id+'" data-iid="'+xid+'" class="fgrid chgf"><label class="f">구분<select name="kind"><option value="up">증액</option><option value="dn">감액</option></select></label><label class="f">금액(원)<input type="text" inputmode="numeric" class="money" name="amount" id="bca-'+xid+'"></label><label class="f">변경일<input type="date" name="date" value="'+today()+'"></label><label class="f wide">변경 사유<input type="text" name="reason" maxlength="100" placeholder="예: 추경 반영, 항목 간 전용"></label><div class="f fbtn row"><button class="btn sm">변경 기록</button><button type="button" class="btn ghost sm" data-act="bccancel">취소</button></div></form>';
+      return r+'</li>'}).join('')+'</ul>';
+    h+='<form data-bf="'+id+'" class="fgrid"><label class="f">새 예산 항목<input type="text" name="name" id="bfn-'+id+'" placeholder="예: 강사비" maxlength="40"></label><label class="f">당초 예산(원)<input type="text" inputmode="numeric" class="money" name="orig" placeholder="0"></label><label class="f wide">산출근거<input type="text" name="basis" maxlength="300" placeholder="예: 50,000원 × 2시간 × 5회"></label><div class="f fbtn"><button class="btn ghost sm">항목 추가</button></div></form>';
+    if(has)h+='<p class="note" style="margin:6px 0 0">당초 예산은 처음 편성한 금액이에요. 추경·전용 등은 \'예산 변경\'으로 기록하면 현재 예산에 자동 반영돼요. 항목을 지우면 그 항목의 지출 기록도 함께 지워져요.</p>';
+    h+='</div>';
+  }
+  h+='</div>';
+  // ② 지출 관리
+  h+='<div class="bstep bspend"><div class="bsh" style="cursor:default"><span class="bno">②</span><b>지출 기록</b><span class="note" style="display:inline;margin-left:6px">예정 지출을 미리 적어 두고, 실제로 쓰면 \'완료 처리\'를 눌러요</span></div><div class="bsb">'+(has?spendForm(id,B):miniChick('coin','① 예산 설정에서 항목을 하나 이상 만들면 여기서 지출을 기록할 수 있어요.'))+'</div></div>';
+  if(has){
+    h+='<h3 class="bth">항목별 집행 현황 <span class="note" style="display:inline;font-weight:400">항목을 누르면 산출근거·지출 내역이 보여요</span></h3><div class="scroll"><table class="bt"><thead><tr><th>항목</th><th class="n">현재 예산</th><th class="n">집행 예정</th><th class="n">집행 완료</th><th class="n">가용 잔액</th><th class="n">집행률</th></tr></thead><tbody>';
+    for(const x of B.items){const op=budOpen.has(x.id),xid=esc(x.id),ov=x.avail<0;
+      h+='<tr class="bi'+(op?' op':'')+(ov?' ovr':'')+'"><td><button type="button" class="lk bn" data-act="btog" data-iid="'+xid+'" aria-expanded="'+op+'">'+(op?'▾ ':'▸ ')+esc(x.name)+'</button> <small class="note" style="display:inline">'+x.spends.length+'건</small>'+(ov?' <span class="warnb sm">초과</span>':'')+'</td><td class="n">'+won(x.cur)+(x.cur!==x.orig?'<small class="sub2">당초 '+won(x.orig)+'</small>':'')+'</td><td class="n">'+won(x.plan)+'</td><td class="n">'+won(x.done)+'</td><td class="n'+(ov?' hot':'')+'"><b>'+won(x.avail)+'</b></td><td class="n'+(x.done>x.cur&&x.cur>0?' hot':'')+'">'+pctTxt(x.done,x.cur)+'</td></tr>';
+      if(op)h+='<tr class="sp"><td colspan="6">'+(x.basis?'<p class="basis"><b>산출근거</b> '+esc(x.basis)+'</p>':'')+(x.spends.length?'<ul class="spl">'+x.spends.map(e=>spendRow(id,x,e)).join('')+'</ul>':'<p class="empty" style="margin:2px 0">아직 지출 기록이 없어요. 위 ② 지출 기록에서 적어 주세요.</p>')+'</td></tr>';
+    }
+    h+='</tbody><tfoot><tr><th>합계</th><th class="n">'+won(B.total)+'</th><th class="n">'+won(B.plan)+'</th><th class="n">'+won(B.done)+'</th><th class="n'+(B.avail<0?' hot':'')+'">'+won(B.avail)+'</th><th class="n">'+pctTxt(B.done,B.total)+'</th></tr></tfoot></table></div>';
+  }
+  return h+'</section>';
+}
+function renderBudget(list,bl){
+  const v=$('#vBud');if(!v)return;
+  if(!$('#budTools')){v.innerHTML='<div id="budTop"></div><div id="budTools"></div><div id="budBody"></div>'}
+  const scope=budScope(bl),all=scope.map(b=>({b,B:budOf(b),el:bstats(list,b).el}));
+  const sum=k=>all.reduce((s,x)=>s+x.B[k],0),G={total:sum('total'),orig:sum('orig'),done:sum('done'),plan:sum('plan')};G.avail=G.total-G.done-G.plan;
+  put($('#budTop'),'<section class="card pane budtop"><div class="row" style="flex-wrap:nowrap;align-items:center;gap:14px"><svg class="mini big" viewBox="0 0 64 64" aria-hidden="true">'+chickSVG('coin')+'</svg><div style="flex:1;min-width:0"><h2>'+(filter&&scope[0]?esc(scope[0].name)+' 예산 집행 현황':'전체 예산 집행 현황')+(budQ?' <small class="note" style="display:inline">· \''+esc(budQ)+'\' 검색 결과 '+scope.length+'개 사업</small>':'')+'</h2><p class="sub" style="margin:2px 0 0">가용 잔액 = 현재 예산 − 집행 완료 − 집행 예정 · 집행률은 완료 금액 기준이에요.</p></div></div>'+budKpi(G,true)+stackBar(G.total,G.done,G.plan,null)+legend+'</section>');
+  put($('#budTools'),'<div class="btools"><div class="bseg" role="tablist" aria-label="조회 방식">'+[['biz','사업별'],['month','월별'],['item','항목별']].map(([k,t])=>'<button type="button" role="tab" data-act="bmode" data-m="'+k+'" aria-selected="'+(budMode===k)+'">'+t+'</button>').join('')+'</div><input type="search" id="budQ" value="'+esc(budQ)+'" placeholder="사업명·항목명 검색" aria-label="사업명·항목명 검색"><button type="button" class="btn ghost sm" data-act="budxls">엑셀로 내려받기</button></div>');
+  let h='';
+  if(!bl.length)h='<section class="card pane">'+miniChick('wave','세부사업을 먼저 만들어 주세요. 월간 화면 오른쪽 \'+ 세부사업\'에서 만들 수 있어요.')+'</section>';
+  else if(!scope.length)h='<section class="card pane">'+miniChick('worry','검색 결과가 없어요. 다른 이름으로 찾아보거나 \'전체 사업\'을 눌러 보세요.')+'</section>';
+  else if(budMode==='month'){
+    const M=monthAgg(scope,budYear),tp=M[11].cp,ta=M[11].ca;
+    h='<section class="card pane"><div class="row" style="align-items:center;gap:8px"><h2 style="margin:0;flex:1">월별 집행계획 대비 실적</h2><button type="button" class="btn ghost sm" data-act="byear" data-d="-1" aria-label="이전 해">‹</button><b>'+budYear+'년</b><button type="button" class="btn ghost sm" data-act="byear" data-d="1" aria-label="다음 해">›</button></div>'+monthChart(M)+'<div class="scroll"><table class="bt"><thead><tr><th>월</th><th class="n">집행계획</th><th class="n">집행실적</th><th class="n">계획 대비</th><th class="n">누적 계획</th><th class="n">누적 실적</th><th class="n">미완료 예정</th></tr></thead><tbody>'+M.map(r=>'<tr><td>'+r.m+'월</td><td class="n">'+won(r.plan)+'</td><td class="n">'+won(r.act)+'</td><td class="n">'+pctTxt(r.act,r.plan)+'</td><td class="n">'+won(r.cp)+'</td><td class="n">'+won(r.ca)+'</td><td class="n">'+(r.open?won(r.open):'-')+'</td></tr>').join('')+'</tbody><tfoot><tr><th>합계</th><th class="n">'+won(tp)+'</th><th class="n">'+won(ta)+'</th><th class="n">'+pctTxt(ta,tp)+'</th><th></th><th></th><th class="n">'+won(M.reduce((s,r)=>s+r.open,0))+'</th></tr></tfoot></table></div><p class="note">집행계획은 \'집행 예정\'으로 등록했던 금액이에요(완료 처리 뒤에도 원래 예정 월에 남아요). 처음부터 \'집행 완료\'로 적은 지출은 실적에만 들어가요.</p></section>';
+  }else if(budMode==='item'){
+    const g={};for(const {b,B} of all)for(const x of B.items){const k=x.name.trim();(g[k]=g[k]||{name:k,cur:0,done:0,plan:0,biz:[]});g[k].cur+=x.cur;g[k].done+=x.done;g[k].plan+=x.plan;g[k].biz.push(b.name)}
+    const rows=Object.values(g).sort((a,c)=>c.cur-a.cur);
+    h='<section class="card pane"><h2>항목별 예산 집행 현황</h2><p class="sub" style="margin:2px 0 10px">이름이 같은 예산 항목을 사업 구분 없이 합쳐서 보여줘요.</p>'+(rows.length?'<div class="scroll"><table class="bt"><thead><tr><th>예산 항목</th><th class="n">현재 예산</th><th class="n">집행 예정</th><th class="n">집행 완료</th><th class="n">가용 잔액</th><th class="n">집행률</th></tr></thead><tbody>'+rows.map(r=>{const av=r.cur-r.done-r.plan;return '<tr class="'+(av<0?'ovr':'')+'"><td><b>'+esc(r.name)+'</b><small class="sub2">'+r.biz.map(esc).join(', ')+'</small></td><td class="n">'+won(r.cur)+'</td><td class="n">'+won(r.plan)+'</td><td class="n">'+won(r.done)+'</td><td class="n'+(av<0?' hot':'')+'"><b>'+won(av)+'</b></td><td class="n">'+pctTxt(r.done,r.cur)+'</td></tr>'}).join('')+'</tbody></table></div>':miniChick('coin','아직 예산 항목이 없어요. 사업별 보기에서 예산을 설정해 주세요.'))+'</section>';
+  }else{
+    const withB=all.filter(x=>x.B.items.length||budSet.has(x.b.id)),noB=all.filter(x=>!x.B.items.length&&!budSet.has(x.b.id));
+    h=withB.map(({b,B,el})=>bizBudCard(b,B,el)).join('');
+    if(noB.length)h+='<section class="card pane"><h3 style="margin:0 0 8px">예산 미설정 사업 <span class="note" style="display:inline;font-weight:400">'+noB.length+'개</span></h3><div class="nob-l">'+noB.map(({b})=>'<button type="button" class="nobb" data-act="bset" data-id="'+esc(b.id)+'" style="'+cv(b.color)+'"><i></i>'+esc(b.name)+' <span>예산 설정 ＋</span></button>').join('')+'</div></section>';
+  }
+  put($('#budBody'),h);
+}
+function budCsv(scope){
+  const rows=[['예산 집행현황표','작성일 '+today()],[],['■ 사업별 예산 집행현황'],['세부사업','당초 예산','현재 예산','집행 완료','집행 예정','가용 잔액','집행률(완료 기준)']];
+  let G={o:0,t:0,d:0,p:0};
+  for(const b of scope){const B=budOf(b);if(!B.items.length)continue;G.o+=B.orig;G.t+=B.total;G.d+=B.done;G.p+=B.plan;rows.push([b.name,B.orig,B.total,B.done,B.plan,B.avail,pctTxt(B.done,B.total)])}
+  rows.push(['합계',G.o,G.t,G.d,G.p,G.t-G.d-G.p,pctTxt(G.d,G.t)],[],['■ 항목별 상세'],['세부사업','예산 항목','산출근거','당초 예산','증감액','현재 예산','집행 완료','집행 예정','가용 잔액','집행률','변경 사유']);
+  for(const b of scope)for(const x of budOf(b).items)rows.push([b.name,x.name,x.basis,x.orig,x.cur-x.orig,x.cur,x.done,x.plan,x.avail,pctTxt(x.done,x.cur),x.changes.map(c=>c.date+' '+(c.delta>0?'+':'')+c.delta+' '+c.reason).join('\n')]);
+  rows.push([],['■ 지출 내역'],['세부사업','예산 항목','상태','지출일','지출처','지출내용','금액','예정일','예정 금액']);
+  for(const b of scope)for(const x of budOf(b).items)for(const e of x.spends)rows.push([b.name,x.name,e.status==='plan'?'집행 예정':'집행 완료',e.date,e.vendor,e.memo,e.amount,e.planDate,e.planDate?e.planAmount:'']);
+  const M=monthAgg(scope,budYear);rows.push([],['■ '+budYear+'년 월별 집행계획 대비 실적'],['월','집행계획','집행실적','계획 대비','누적 계획','누적 실적']);for(const r of M)rows.push([r.m+'월',r.plan,r.act,pctTxt(r.act,r.plan),r.cp,r.ca]);
+  return '﻿'+rows.map(r=>r.map(csvCell).join(',')).join('\r\n');
 }
 
 /* ---------- render ---------- */
@@ -879,7 +1195,7 @@ function setView(v){view=VIEWS.includes(v)?v:'month';try{if(location.hash!=='#'+
 /* ---------- day memo (S.days) ---------- */
 let mtm=null,memoKey=null,memoVal='';
 function saveMemo(){clearTimeout(mtm);if(memoKey===null)return;const k=memoKey,v=memoVal,c=(S.days[k]&&S.days[k].text)||'';memoKey=null;if(v===c)return;if(v.trim())store.put('days',k,{text:v,updatedAt:Date.now()});else store.del('days',k);const s=$('#memoState');if(s)s.textContent='저장됨'}
-document.addEventListener('input',e=>{if(e.target.id==='dayMemo'){const top=stack[stack.length-1];memoKey=top&&top.t==='day'?top.d:cur;memoVal=e.target.value;const s=$('#memoState');if(s)s.textContent='입력 중…';clearTimeout(mtm);mtm=setTimeout(saveMemo,700)}});
+document.addEventListener('input',e=>{if(e.target.classList&&e.target.classList.contains('money')){const el=e.target,d=el.value.replace(/[^\d]/g,'').replace(/^0+(?=\d)/,'');el.value=d?Number(d).toLocaleString('ko-KR'):'';return}if(e.target.id==='budQ'){budQ=e.target.value;render();return}if(e.target.id==='dayMemo'){const top=stack[stack.length-1];memoKey=top&&top.t==='day'?top.d:cur;memoVal=e.target.value;const s=$('#memoState');if(s)s.textContent='입력 중…';clearTimeout(mtm);mtm=setTimeout(saveMemo,700)}});
 document.addEventListener('focusout',e=>{if(e.target.id==='dayMemo')saveMemo()},true);
 
 /* ---------- events ---------- */
@@ -913,13 +1229,22 @@ document.addEventListener('click',e=>{
     return}
   if(a==='phdone'){const raw=S.biz[id];if(!raw)return;const ph=[...(Array.isArray(raw.phases)?raw.phases:[])],i=Number(b.dataset.i);if(!ph[i])return;const v=!ph[i].done;ph[i]={...ph[i],done:v,doneAt:v?new Date().toISOString():''};store.put('biz',id,{...raw,phases:ph});if(v)toast("'"+String(ph[i].name)+"' 단계를 완료했어요",false);return}
   if(a==='pfdone'){const raw=S.biz[id];if(!raw)return;store.put('biz',id,{...raw,perf:(raw.perf||[]).map(p=>p.id===b.dataset.pid?{...p,done:!p.done,doneAt:!p.done?new Date().toISOString():''}:p)});return}
-  if(a==='btog'){const k=b.dataset.iid;budOpen.has(k)?budOpen.delete(k):budOpen.add(k);render();if(budOpen.has(k)){refocus='sfa-'+k;render()}return}
-  if(a==='bedit'){budEdit=b.dataset.iid;render();return}
+  if(a==='btog'){const k=b.dataset.iid;budOpen.has(k)?budOpen.delete(k):budOpen.add(k);render();return}
+  if(a==='bset'){budSet.has(id)?budSet.delete(id):budSet.add(id);budEdit=null;budChg=null;render();if(budSet.has(id)){refocus='bfn-'+id;render()}return}
+  if(a==='bedit'){budEdit=b.dataset.iid;budChg=null;render();return}
   if(a==='becancel'){budEdit=null;render();return}
-  if(a==='sedit'){spEdit=b.dataset.eid;render();return}
+  if(a==='bchg'){budChg=b.dataset.iid;budEdit=null;refocus='bca-'+b.dataset.iid;render();return}
+  if(a==='bccancel'){budChg=null;render();return}
+  if(a==='cdel'){const old=putBud(id,arr=>arr.map(x=>x.id===b.dataset.iid?{...x,changes:x.changes.filter(c=>c.id!==b.dataset.cid)}:x));if(old){undo=[['biz',id,old]];toast('예산 변경 기록을 지웠어요. 현재 예산이 다시 계산됐어요.',true)}return}
+  if(a==='sedit'){spEdit=b.dataset.eid;spDone=null;render();return}
   if(a==='secancel'){spEdit=null;render();return}
+  if(a==='sdone'){spDone=b.dataset.eid;spEdit=null;render();return}
+  if(a==='sdcancel'){spDone=null;render();return}
   if(a==='bdelit'){const old=putBud(id,arr=>arr.filter(x=>x.id!==b.dataset.iid));if(old){undo=[['biz',id,old]];toast('예산 항목과 지출 기록을 지웠어요',true)}return}
-  if(a==='sdel'){const old=putBud(id,arr=>arr.map(x=>x.id===b.dataset.iid?{...x,spends:x.spends.filter(e=>e.id!==b.dataset.eid)}:x));if(old){undo=[['biz',id,old]];toast('지출 기록을 지웠어요',true)}return}
+  if(a==='sdel'){const old=putBud(id,arr=>arr.map(x=>x.id===b.dataset.iid?{...x,spends:x.spends.filter(e=>e.id!==b.dataset.eid)}:x));if(old){undo=[['biz',id,old]];toast('지출 기록을 지웠어요. 금액이 다시 계산됐어요.',true)}return}
+  if(a==='bmode'){budMode=b.dataset.m;render();return}
+  if(a==='byear'){budYear+=Number(b.dataset.d)||0;render();return}
+  if(a==='budxls'){const sc=budScope(bizList());saveFile('예산집행현황_'+today()+'.csv',budCsv(sc),'text/csv').then(ok=>{if(ok)toast('예산 집행현황표를 저장했어요. 엑셀에서 열 수 있어요.',false)});return}
   if(a==='gobud'){filter=id;closeD();setView('bud');return}
   if(a==='pfdel'){const raw=S.biz[id];if(!raw)return;undo=[['biz',id,raw]];store.put('biz',id,{...raw,perf:(raw.perf||[]).filter(p=>p.id!==b.dataset.pid)});toast('성과 지표를 지웠어요',true);return}
   if(a==='pfup'){const li=b.closest('li'),raw=S.biz[id],p=raw&&(raw.perf||[]).find(x=>x.id===b.dataset.pid);if(!li||!p)return;li.querySelector('.pp').innerHTML='<form data-pfu="'+esc(id)+'" data-pid="'+esc(p.id)+'" class="row" style="flex-wrap:nowrap"><input type="number" name="actual" value="'+(Number(p.actual)||0)+'" step="any" aria-label="실적" id="pfu-in" style="width:90px"><button class="btn sm">저장</button></form>';$('#pfu-in').focus();return}
@@ -927,6 +1252,9 @@ document.addEventListener('click',e=>{
   if(a==='repbiz'){rp.type='biz';rp.biz=id;closeD();setView('rep');return}
   if(a==='repcopy'){copyText(repText(repData()));return}
   if(a==='repcsv'){const R=repData();saveFile('업무보고_'+R.F+'_'+R.T+'.csv',repCsv(R),'text/csv').then(ok=>{if(ok)toast('엑셀에서 열 수 있는 파일을 저장했어요.',false)});return}
+  if(a==='pmode'){pmode=b.dataset.m;render();return}
+  if(a==='psprint'){doPrint();return}
+  if(a==='psfile'){const css=[...document.querySelectorAll('style')].map(s=>s.textContent).join('\n');const doc='<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>'+esc(psTitle())+'</title><style>'+css.replace(/<\/style/gi,'')+'\nbody{padding:16px;background:#eee}@media print{body{padding:0;background:#fff}.psheet{box-shadow:none;margin:0;padding:0;width:auto}}</style></head><body onload="setTimeout(function(){window.print()},300)">'+psSheet()+'</body></html>';saveFile(psTitle().replace(/\s/g,'')+'.html',doc,'text/html').then(ok=>{if(ok)toast('인쇄용 파일을 저장했어요. 열면 인쇄 창이 떠요.',false)});return}
   if(a==='rephtml'){const R=repData(),css=[...document.querySelectorAll('style')].map(s=>s.textContent).join('\n');const doc='<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>'+esc(R.title)+'</title><style>'+css.replace(/<\/style/gi,'')+'\nbody{padding:24px max(4vw,16px)}.rpo{max-width:900px;margin:0 auto;border:0}</style></head><body><article class="rpo">'+repHtml(R)+'</article></body></html>';saveFile(R.title.replace(/\s/g,'')+'_'+R.F+'_'+R.T+'.html',doc,'text/html').then(ok=>{if(ok)toast('보고서 파일을 저장했어요. 열어서 인쇄하거나 PDF로 저장할 수 있어요.',false)});return}
   if(a==='seed'){seed();return}
   if(a==='gsend'){gsend(id);return}
@@ -940,6 +1268,9 @@ document.addEventListener('toggle',e=>{const d=e.target;if(d.dataset&&d.dataset.
 document.addEventListener('change',e=>{
   const el=e.target;
   if(el.id==='hideDone'){hideDone=el.checked;try{localStorage.setItem('wp2-hide',hideDone?'1':'0')}catch(err){}render();return}
+  if(el.id==='psType'){ps.type=el.value;psSave();render();return}
+  if(el.id==='psBiz'){ps.biz=el.value;render();return}
+  if(['psDone','psBud','psMemo'].includes(el.id)){ps[{psDone:'done',psBud:'bud',psMemo:'memo'}[el.id]]=el.checked;psSave();render();return}
   if(el.id==='rpType'){rp.type=el.value;render();return}
   if(el.id==='rpBiz'){rp.biz=el.value;render();return}
   if(el.id==='rpFrom'||el.id==='rpTo'){const [F,T]=rpRange();rp.from=$('#rpFrom').value||F;rp.to=$('#rpTo').value||T;if(rp.to<rp.from)rp.to=rp.from;rp.type='custom';render();return}
@@ -966,10 +1297,17 @@ document.addEventListener('submit',e=>{
   if(f.dataset.phr){const raw=S.biz[f.dataset.phr],name=g('name'),i=Number(f.dataset.i);if(!raw||!name)return;const ph=[...(raw.phases||[])];if(ph[i])ph[i]={...ph[i],name:name.slice(0,40)};store.put('biz',f.dataset.phr,{...raw,phases:ph});return}
   if(f.dataset.pf){const raw=S.biz[f.dataset.pf],label0=g('label');if(!raw||!label0)return;store.put('biz',f.dataset.pf,{...raw,perf:[...(Array.isArray(raw.perf)?raw.perf:[]),{id:nid(),label:label0.slice(0,40),target:Number(g('target'))||0,actual:Number(g('actual'))||0,unit:g('unit').slice(0,6)}]});return}
   if(f.dataset.pfu){const raw=S.biz[f.dataset.pfu];if(!raw)return;store.put('biz',f.dataset.pfu,{...raw,perf:(raw.perf||[]).map(p=>p.id===f.dataset.pid?{...p,actual:Number(g('actual'))||0}:p)});return}
-  if(f.dataset.bf){const name=g('name'),amt=Math.max(0,Math.round(Number(g('amount'))||0));if(!name)return;putBud(f.dataset.bf,arr=>[...arr,{id:nid(),name:name.slice(0,40),amount:amt,spends:[]}]);refocus='bfn-'+f.dataset.bf;toast('예산 항목을 추가했어요. 항목 이름을 누르면 지출을 기록할 수 있어요.',false);return}
-  if(f.dataset.be){const name=g('name'),amt=Math.max(0,Math.round(Number(g('amount'))||0));if(!name)return;budEdit=null;putBud(f.dataset.be,arr=>arr.map(x=>x.id===f.dataset.iid?{...x,name:name.slice(0,40),amount:amt}:x));return}
-  if(f.dataset.sf){const amt=Math.round(Number(g('amount'))||0),d=g('date');if(!amt){toast('금액을 적어 주세요.',false);return}putBud(f.dataset.sf,arr=>arr.map(x=>x.id===f.dataset.iid?{...x,spends:[...x.spends,{id:nid(),date:isDay(d)?d:today(),amount:amt,memo:g('memo').slice(0,100),at:new Date().toISOString()}]}:x));refocus='sfa-'+f.dataset.iid;toast(won(amt)+' 지출을 기록했어요',false);return}
-  if(f.dataset.se){const amt=Math.round(Number(g('amount'))||0),d=g('date');if(!amt)return;spEdit=null;putBud(f.dataset.se,arr=>arr.map(x=>x.id===f.dataset.iid?{...x,spends:x.spends.map(e=>e.id===f.dataset.eid?{...e,date:isDay(d)?d:e.date,amount:amt,memo:g('memo').slice(0,100)}:e)}:x));return}
+  if(f.dataset.bf){const name=g('name'),orig=Math.max(0,num(g('orig')));if(!name){toast('항목 이름을 적어 주세요.',false);return}budSet.add(f.dataset.bf);putBud(f.dataset.bf,arr=>[...arr,{id:nid(),name:name.slice(0,40),orig,amount:orig,basis:g('basis').slice(0,300),changes:[],spends:[]}]);refocus='bfn-'+f.dataset.bf;toast('예산 항목을 추가했어요. 아래 ② 지출 기록에서 지출을 적을 수 있어요.',false);return}
+  if(f.dataset.be){const name=g('name'),orig=Math.max(0,num(g('orig')));if(!name)return;budEdit=null;putBud(f.dataset.be,arr=>arr.map(x=>x.id===f.dataset.iid?{...x,name:name.slice(0,40),orig,basis:g('basis').slice(0,300)}:x));return}
+  if(f.dataset.bc){const amt=Math.abs(num(g('amount')));if(!amt){toast('변경 금액을 적어 주세요.',false);return}const delta=g('kind')==='dn'?-amt:amt,d=g('date');budChg=null;putBud(f.dataset.bc,arr=>arr.map(x=>x.id===f.dataset.iid?{...x,changes:[...x.changes,{id:nid(),date:isDay(d)?d:today(),delta,reason:g('reason').slice(0,100),at:new Date().toISOString()}]}:x));toast('예산 '+(delta>0?'증액':'감액')+' '+won(amt)+'을 기록했어요',false);return}
+  if(f.dataset.sf){const bid=f.dataset.sf,amt=Math.abs(num(g('amount'))),d=g('date'),it=g('item'),st=g('status')==='plan'?'plan':'done';if(!amt){toast('금액을 적어 주세요.',false);return}
+    budLast[bid]=it;budSt[bid]=st;const bb=bizList().find(x=>x.id===bid),before=bb?budOf(bb).items.find(x=>x.id===it):null;const dd=isDay(d)?d:today();
+    putBud(bid,arr=>arr.map(x=>x.id!==it?x:{...x,spends:[...x.spends,{id:nid(),status:st,date:dd,vendor:g('vendor').slice(0,40),memo:g('memo').slice(0,100),amount:amt,planDate:st==='plan'?dd:'',planAmount:st==='plan'?amt:0,at:new Date().toISOString(),doneAt:st==='done'?new Date().toISOString():''}]}));
+    refocus='sfa-'+bid;const nm=before?before.name:'';
+    if(before&&before.avail-amt<0)toast('⚠ '+nm+' 가용 잔액을 '+won(amt-before.avail)+' 초과했어요. 예산 변경이 필요한지 확인해 주세요.',false,true);
+    else toast((nm?nm+'에 ':'')+won(amt)+(st==='plan'?' 집행 예정':' 지출')+'을 기록했어요',false);return}
+  if(f.dataset.se){const amt=Math.abs(num(g('amount'))),d=g('date'),st=g('status')==='plan'?'plan':'done';if(!amt)return;spEdit=null;putBud(f.dataset.se,arr=>arr.map(x=>x.id===f.dataset.iid?{...x,spends:x.spends.map(e=>{if(e.id!==f.dataset.eid)return e;const n={...e,status:st,date:isDay(d)?d:e.date,vendor:g('vendor').slice(0,40),memo:g('memo').slice(0,100),amount:amt};if(st==='plan'){n.planDate=n.date;n.planAmount=amt;n.doneAt=''}else if(e.status==='plan')n.doneAt=new Date().toISOString();return n})}:x));return}
+  if(f.dataset.sd){const amt=Math.abs(num(g('amount'))),d=g('date');if(!amt)return;spDone=null;putBud(f.dataset.sd,arr=>arr.map(x=>x.id===f.dataset.iid?{...x,spends:x.spends.map(e=>e.id===f.dataset.eid?{...e,status:'done',date:isDay(d)?d:today(),amount:amt,planDate:e.planDate||e.date,planAmount:e.planAmount||e.amount,doneAt:new Date().toISOString()}:e)}:x));toast('집행 완료로 바꿨어요',false);return}
   if(f.id==='bf'){const name=g('name'),st=g('start'),en=g('end'),c=g('color')||'b0',id=f.dataset.id;if(!name){$('#bErr').textContent='세부사업 이름을 적어 주세요.';return}if(st&&en&&en<st){$('#bErr').textContent='종료일이 시작일보다 빨라요.';return}
     const o={name:name.slice(0,60),color:col(c),start:isDay(st)?st:'',end:isDay(en)?en:''};
     if(id&&S.biz[id]){store.put('biz',id,{...S.biz[id],...o});backD()}else{const nidv=nid();lastBiz=nidv;store.put('biz',nidv,{...o,createdAt:Date.now()});stack=[{t:'biz',id:nidv}];render()}
@@ -977,7 +1315,7 @@ document.addEventListener('submit',e=>{
 });
 $('#prev').addEventListener('click',()=>step(-1));$('#next').addEventListener('click',()=>step(1));
 $('#goToday').addEventListener('click',()=>{cur=today();render()});
-function step(n){if(view==='rep'){if(rp.type==='month'){const d=parse(cur);cur=ymd(new Date(d.getFullYear(),d.getMonth()+n,1))}else cur=addDays(cur,rp.type==='week'?7*n:n);render();return}if(view==='month'){const d=parse(cur);cur=ymd(new Date(d.getFullYear(),d.getMonth()+n,1))}else if(view==='week')cur=addDays(cur,7*n);else cur=addDays(cur,n);render()}
+function step(n){if(view==='rep'&&pmode==='print'){if(ps.type==='month'){const d=parse(cur);cur=ymd(new Date(d.getFullYear(),d.getMonth()+n,1))}else cur=addDays(cur,7*n);render();return}if(view==='rep'){if(rp.type==='month'){const d=parse(cur);cur=ymd(new Date(d.getFullYear(),d.getMonth()+n,1))}else cur=addDays(cur,rp.type==='week'?7*n:n);render();return}if(view==='month'){const d=parse(cur);cur=ymd(new Date(d.getFullYear(),d.getMonth()+n,1))}else if(view==='week')cur=addDays(cur,7*n);else cur=addDays(cur,n);render()}
 $('#drClose').addEventListener('click',closeD);$('#drBack').addEventListener('click',backD);$('#ov').addEventListener('click',closeD);
 $('#tUndo').addEventListener('click',()=>{if(undo){for(const [k,i,o] of undo)store.put(k,i,o);undo=null}$('#toast').hidden=true});
 addEventListener('hashchange',()=>{const v=location.hash.slice(1);if(VIEWS.includes(v)&&v!==view)setView(v)});
@@ -1021,7 +1359,7 @@ function backupCsv(){const bm=bizMap(),rows=[['세부사업','단계','할 일',
   for(const t of items().sort((a,b)=>(a.date||'9').localeCompare(b.date||'9'))){const b=bm[t.biz],ph=b?b.phases.find(p=>p.id===t.phase):null,par=t.parent?item(t.parent):null;rows.push([b?b.name:'세부사업 없음',ph?ph.name:'',t.title,t.date,t.end,t.due,t.time,PRI[t.prio],ST[t.status],doneDay(t),t.origDate,t.carried||'',par?par.title:'',t.logs.map(l=>l.date+' '+l.text).join(' | ')])}
   rows.push([]);rows.push(['세부사업','업무 완료율(%)','완료','전체','시작일','종료일','성과 지표']);for(const b of bizList()){const s=bstats(items(),b);rows.push([b.name,s.pct,s.done,s.total,b.start,b.end,b.perf.map(p=>p.label+' '+p.actual+'/'+p.target+p.unit).join(' | ')])}
   rows.push([]);rows.push(['세부사업','날짜','종류','사업 메모']);for(const n of notes().sort((a,b)=>a.date.localeCompare(b.date)))rows.push([bm[n.biz]?bm[n.biz].name:'세부사업 없음',n.date,n.kind==='decision'?'의사결정':'메모',n.body]);
-  {const br=[];for(const b of bizList()){const B=budOf(b);for(const x of B.items){br.push([b.name,x.name,x.amount,'','',x.used,pctTxt(x.used,x.amount)]);for(const e of x.spends)br.push([b.name,x.name,'',e.date,e.memo,e.amount,''])}}if(br.length){rows.push([]);rows.push(['세부사업','예산 항목','예산액(원)','지출일','지출 내용','집행액(원)','집행률']);br.forEach(r=>rows.push(r))}}
+  {const br=[];for(const b of bizList()){const B=budOf(b);for(const x of B.items){br.push([b.name,x.name,'예산',x.basis,'',x.orig,x.cur,'',x.done,x.plan,x.avail,pctTxt(x.done,x.cur)]);for(const c of x.changes)br.push([b.name,x.name,'예산 변경',c.reason,c.date,'',c.delta,'','','','','']);for(const e of x.spends)br.push([b.name,x.name,e.status==='plan'?'집행 예정':'집행 완료',(e.vendor?e.vendor+' · ':'')+e.memo,e.date,'','',e.amount,'','','',''])}}if(br.length){rows.push([]);rows.push(['세부사업','예산 항목','구분','산출근거/내용','날짜','당초 예산','현재 예산/증감','지출 금액','집행 완료 합계','집행 예정 합계','가용 잔액','집행률']);br.forEach(r=>rows.push(r))}}
   rows.push([]);rows.push(['날짜','날짜 메모']);for(const [k,v] of Object.entries(S.days).sort((a,b)=>a[0].localeCompare(b[0])))if(isDay(k)&&v&&v.text)rows.push([k,String(v.text)]);
   return '﻿'+rows.map(r=>r.map(csvCell).join(',')).join('\r\n')}
 async function saveFile(filename,text,mime){
@@ -1054,6 +1392,7 @@ function useLocal(){
   const LK='work-planner-v2';let raw=null,d={};
   try{raw=localStorage.getItem(LK);d=JSON.parse(raw||'{}')||{}}catch(e){d={}}
   try{if(raw&&!localStorage.getItem('work-planner-v2-before-v3'))localStorage.setItem('work-planner-v2-before-v3',raw)}catch(e){}
+  try{if(raw&&!localStorage.getItem('work-planner-v2-before-v3.7'))localStorage.setItem('work-planner-v2-before-v3.7',raw)}catch(e){}
   for(const k of K)S[k]=d[k]&&typeof d[k]==='object'?d[k]:{};
   let warned=false;
   const save=()=>{try{localStorage.setItem(LK,JSON.stringify(S));warned=false}catch(e){if(!warned){warned=true;toast('저장하지 못했어요. 저장 공간이 부족하거나 브라우저가 저장을 막고 있어요. 지금 바로 백업 파일을 내려받아 주세요.',false,true)}}};
